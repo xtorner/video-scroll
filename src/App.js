@@ -2,10 +2,13 @@ import React, { useState, useRef, useEffect } from "react";
 import "./App.css";
 import video from "./vid.mp4";
 function App() {
+  const [isLoaded, setIsLoaded] = useState(false);
   const [progress, setProgress] = useState(0);
   const videoEl = useRef(null);
   // const cursorEl = useRef(null);
   const handleLoadedData = () => {
+    setIsLoaded(true);
+    alert(isLoaded);
     setProgress((videoEl.current.duration / 100) * progress);
   };
   const handleTimeUpdate = () => {
@@ -17,7 +20,7 @@ function App() {
       videoEl.current.currentTime = scrollPos / 10;
     };
     window.addEventListener("scroll", handleScroll);
-    
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -43,9 +46,10 @@ function App() {
       <div className="video-screen">
         <progress value={progress} max="100" className="progress-bar" />
         <video
+          preload="auto"
           ref={videoEl}
           src={video}
-          onLoadedData={handleLoadedData}
+          onLoadedData={() => handleLoadedData}
           onTimeUpdate={handleTimeUpdate}
         />
       </div>
