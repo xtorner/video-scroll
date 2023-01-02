@@ -54,13 +54,19 @@ function App() {
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
               <li className="nav-item active">
-                <NavLink className="nav-link" href="#"></NavLink>
+                <NavLink className="nav-link" href="#">
+                  The Platform
+                </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" href="#"></NavLink>
+                <NavLink className="nav-link" href="#">
+                  Plans
+                </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" href="#"></NavLink>
+                <NavLink className="nav-link" href="#">
+                  Company
+                </NavLink>
               </li>
             </ul>
           </div>

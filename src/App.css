@@ -10,6 +10,23 @@
   background-color: transparent;
 }
 /* Menu Top Wrapper */
+.navbar-nav {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+}
+.nav-link {
+  font-weight: 600;
+  color: var(--color-text);
+  padding-right: 3rem !important;
+}
+.nav-link a {
+  transform: all 200ms ease-in;
+}
+.nav-link a:hover {
+  color: #393939;
+}
 .nav-menu {
   display: flex;
   flex-flow: row wrap;
@@ -25,6 +42,8 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
+  position: sticky;
+  z-index: -1;
 }
 /* End Video Animation */
 

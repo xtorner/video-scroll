@@ -1,3 +1,6 @@
+:root {
+  --color-text: #191919;
+}
 body {
   margin: 0;
   padding: 0;
