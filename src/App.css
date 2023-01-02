@@ -28,18 +28,6 @@
 }
 /* End Video Animation */
 
-.fixednav {
-  position: fixed;
-  height: 4rem;
-  background: red;
-}
-.hidden {
-  visibility: hidden;
-}
-.bordered {
-  visibility: hidden;
-}
-
 /* PROGESS BAR ON TOP */
 .progress-bar {
   height: 0.1rem;
