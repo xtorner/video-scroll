@@ -4,19 +4,20 @@ import "./App.css";
 
 import video from "./vid.mp4";
 import { NavLink } from "react-bootstrap";
+import useWindowResize from "./components/hooks/windowresize";
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [progress, setProgress] = useState(0);
   const videoEl = useRef(null);
 
   const handleLoadedData = () => {
-    setIsLoaded(true);
-
     setProgress((videoEl.current.duration / 100) * progress);
   };
 
   const handleTimeUpdate = () => {
-    setProgress((videoEl.current.currentTime / videoEl.current.duration) * 100);
+    setProgress(
+      (videoEl.current.currentTime / (videoEl.current.duration * 100)) * 100
+    );
   };
 
   useEffect(() => {
@@ -31,6 +32,7 @@ function App() {
     };
   }, []);
 
+  useWindowResize(videoEl);
   return (
     <>
       <div className="area-top">
@@ -81,8 +83,13 @@ function App() {
           onTimeUpdate={handleTimeUpdate}
         />
       </div>
-      <section className="section">Section Uno</section>
-      <section className="section">Section Dos</section>
+      <section className="section section-1">
+        <div className="card w-100">Section Uno</div>
+      </section>
+      <section className="section section-2"></section>
+      <section className="section section-2"></section>
+      <section className="section section-2"></section>
+      <section className="section section-2"></section>
     </>
   );
 }

@@ -8,6 +8,7 @@
   height: 3rem;
   width: 100%;
   background-color: transparent;
+  z-index: 2;
 }
 /* Menu Top Wrapper */
 .navbar-nav {
@@ -42,8 +43,8 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  position: sticky;
-  z-index: -1;
+  position: fixed;
+  z-index: 1;
 }
 /* End Video Animation */
 
@@ -85,13 +86,30 @@ progress[value]::-webkit-progress-value {
 /* END PROGESS BAR ON TOP */
 
 .section {
-  z-index: 10;
-  background-color: #f44;
-  height: 40rem;
+  z-index: 5;
+  position: relative;
+  height: auto;
   width: 100%;
   display: flex;
 }
+.section-1 {
+  display: flex;
+  width: 200px;
+  justify-content: flex-end;
+  margin-right: 20%;
 
+  top: 8rem;
+  padding-bottom: 10rem;
+}
+.section-2 {
+  display: flex;
+  width: 200px;
+  justify-content: flex-end;
+  margin-right: 20%;
+
+  top: 28rem;
+  padding-bottom: 10rem;
+}
 /* SCROLL RELATED */
 body::-webkit-scrollbar {
   --scrollbar-foreground: #999;
