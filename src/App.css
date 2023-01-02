@@ -2,16 +2,32 @@
   text-align: center;
 }
 
+/* Head Wrapper */
 .area-top {
   position: fixed;
-  height: 2rem;
-  background-color: #09c;
+  height: 3rem;
+  width: 100%;
+  background-color: transparent;
 }
+/* Menu Top Wrapper */
+.nav-menu {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid red;
+  height: 3rem;
+}
+
+/* Video animation */
 .video-screen {
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
+/* End Video Animation */
+
 .fixednav {
   position: fixed;
   height: 4rem;
@@ -23,6 +39,8 @@
 .bordered {
   visibility: hidden;
 }
+
+/* PROGESS BAR ON TOP */
 .progress-bar {
   height: 0.1rem;
   width: 100%;
@@ -34,7 +52,7 @@ progress[value] {
   -webkit-appearance: none;
   appearance: none;
   position: fixed;
-  height: 0.3rem;
+  height: 0.1rem;
   width: 100%;
   z-index: 99;
 }
@@ -43,7 +61,6 @@ progress[value]::-webkit-progress-bar {
   border-radius: 2px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
 }
-
 progress[value]::-webkit-progress-value {
   background-image: -webkit-linear-gradient(
       -45deg,
@@ -58,17 +75,7 @@ progress[value]::-webkit-progress-value {
   border-radius: 2px;
   background-size: 35px 20px, 100% 100%, 100% 100%;
 }
-.cursor {
-  background: url(/public/img/cursor-full.png) no-repeat center;
-  background-size: contain;
-  width: 16px;
-  height: 16px;
-
-  position: fixed;
-  z-index: 100;
-  transition: top 0.1s ease-out, left 0.1s ease-out;
-  cursor: none;
-}
+/* END PROGESS BAR ON TOP */
 
 .section {
   z-index: 10;
@@ -77,6 +84,8 @@ progress[value]::-webkit-progress-value {
   width: 100%;
   display: flex;
 }
+
+/* SCROLL RELATED */
 body::-webkit-scrollbar {
   --scrollbar-foreground: #999;
   --scrollbar-background: #333;
@@ -91,3 +100,4 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background: linear-gradient(45deg, orange, darksalmon);
 }
+/* END SCROLL RELATED */
