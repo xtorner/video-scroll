@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
+import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
+
 import video from "./vid.mp4";
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -40,11 +42,10 @@ function App() {
 
   return (
     <>
-      <div className="container"></div>
-      {/* <div className="cursor" ref={cursorEl}></div> */}
-
-      <div className="video-screen">
+      <div className="area-top">
         <progress value={progress} max="100" className="progress-bar" />
+      </div>
+      <div className="video-screen">
         <video
           preload="auto"
           ref={videoEl}
@@ -54,7 +55,7 @@ function App() {
         />
       </div>
       <section className="section">Section Uno</section>
-      <section className="section">Section Dos</section>
+      <section className="section">Section Dos</section>{" "}
     </>
   );
 }

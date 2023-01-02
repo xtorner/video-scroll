@@ -1,39 +1,42 @@
 .App {
   text-align: center;
 }
+
+.area-top {
+  position: fixed;
+  height: 2rem;
+  background-color: #09c;
+}
 .video-screen {
-  float: left;
-
-  height: 100%;
-  width: 100%;
-  margin:0;
-  padding:0;
-  overflow:hidden;
-  object-fit: cover;
-  cursor:row-resize;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
-.progress-bar{
-  position:fixed;
-  height:0.3rem;
-  width:100%;
-  z-index:99;
-}
-progress[value] {
-  /* Reset the default appearance */
-  -webkit-appearance: none;
-   appearance: none;
-   position:fixed;
-   height:0.3rem;
-   width:100%;
-   z-index:99;
-
- 
+.fixednav {
+  position: fixed;
+  height: 4rem;
+  background: red;
 }
 .hidden {
   visibility: hidden;
 }
 .bordered {
   visibility: hidden;
+}
+.progress-bar {
+  height: 0.1rem;
+  width: 100%;
+  z-index: 99;
+  display: flex;
+}
+progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  position: fixed;
+  height: 0.3rem;
+  width: 100%;
+  z-index: 99;
 }
 progress[value]::-webkit-progress-bar {
   background-color: #eee;
@@ -42,21 +45,22 @@ progress[value]::-webkit-progress-bar {
 }
 
 progress[value]::-webkit-progress-value {
-  background-image:
-	   -webkit-linear-gradient(-45deg, 
-	                           transparent 33%, rgba(0, 0, 0, .1) 33%, 
-	                           rgba(0,0, 0, .1) 66%, transparent 66%),
-	   -webkit-linear-gradient(top, 
-	                           rgba(255, 255, 255, .25), 
-	                           rgba(0, 0, 0, .25)),
-	   -webkit-linear-gradient(left, #09c, #f44);
+  background-image: -webkit-linear-gradient(
+      -45deg,
+      transparent 33%,
+      rgba(0, 0, 0, 0.1) 33%,
+      rgba(0, 0, 0, 0.1) 66%,
+      transparent 66%
+    ),
+    -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.25)),
+    -webkit-linear-gradient(left, #09c, #f44);
 
-    border-radius: 2px; 
-    background-size: 35px 20px, 100% 100%, 100% 100%;
+  border-radius: 2px;
+  background-size: 35px 20px, 100% 100%, 100% 100%;
 }
 .cursor {
   background: url(/public/img/cursor-full.png) no-repeat center;
-  background-size:contain;
+  background-size: contain;
   width: 16px;
   height: 16px;
 
@@ -67,39 +71,23 @@ progress[value]::-webkit-progress-value {
 }
 
 .section {
-  height:40rem;
+  z-index: 10;
+  background-color: #f44;
+  height: 40rem;
   width: 100%;
-  display: flex;;
+  display: flex;
 }
 body::-webkit-scrollbar {
   --scrollbar-foreground: #999;
   --scrollbar-background: #333;
-  width:0.3rem;
+  width: 0.3rem;
   /* Foreground, Background */
   scrollbar-color: var(--scrollbar-foreground) var(--scrollbar-background);
 }
 body::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  height:50%;
+  height: 50%;
 }
 body::-webkit-scrollbar-thumb {
   background: linear-gradient(45deg, orange, darksalmon);
-}
-
-
-.styled-scrollbars {
-  --scrollbar-foreground: #999
-  --scrollbar-background: #333
-  /* Foreground, Background */
-  scrollbar-color: var(--scrollbar-foreground) var(--scrollbar-background);
-}
-.styled-scrollbars::-webkit-scrollbar {
-  width: 10px; /* Mostly for vertical scrollbars */
-  height: 10px; /* Mostly for horizontal scrollbars */
-}
-.styled-scrollbars::-webkit-scrollbar-thumb { /* Foreground */
-  background: var(--scrollbar-foreground);
-}
-.styled-scrollbars::-webkit-scrollbar-track { /* Background */
-  background: var(--scrollbar-background);
 }
