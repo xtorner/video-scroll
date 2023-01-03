@@ -43,8 +43,19 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  position: fixed;
+
   z-index: 1;
+}
+.free {
+  margin: 0;
+  padding: 0;
+
+  position: absolute;
+}
+.stuck {
+  margin: 0;
+  padding: 0;
+  position: fixed !important;
 }
 /* End Video Animation */
 
@@ -78,7 +89,7 @@ progress[value]::-webkit-progress-value {
       transparent 66%
     ),
     -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.25)),
-    -webkit-linear-gradient(left, #09c, #f44);
+    -webkit-linear-gradient(left, #09c, #406eb5);
 
   border-radius: 2px;
   background-size: 35px 20px, 100% 100%, 100% 100%;
@@ -112,17 +123,18 @@ progress[value]::-webkit-progress-value {
 }
 /* SCROLL RELATED */
 body::-webkit-scrollbar {
-  --scrollbar-foreground: #999;
-  --scrollbar-background: #333;
-  width: 0.3rem;
+  --scrollbar-foreground: #406eb550;
+  --scrollbar-background: #406eb5;
+  width: 0.8rem;
   /* Foreground, Background */
   scrollbar-color: var(--scrollbar-foreground) var(--scrollbar-background);
 }
 body::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  height: 50%;
+  height: 100%;
 }
 body::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, orange, darksalmon);
+  border-radius: 0.2rem;
+  background: linear-gradient(-45deg, #406eb5, #406eb590);
 }
 /* END SCROLL RELATED */

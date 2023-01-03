@@ -7,6 +7,7 @@ import { NavLink } from "react-bootstrap";
 import useWindowResize from "./components/hooks/windowresize";
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isVideoVisible, setIsVideoVisible] = useState(false);
   const [progress, setProgress] = useState(0);
   const videoEl = useRef(null);
 
@@ -15,9 +16,11 @@ function App() {
   };
 
   const handleTimeUpdate = () => {
-    setProgress(
-      (videoEl.current.currentTime / (videoEl.current.duration * 100)) * 100
-    );
+    let taim = (videoEl.current.currentTime / videoEl.current.duration) * 100;
+    if (videoEl.current.currentTime === videoEl.current.duration)
+      setIsVideoVisible(true);
+    else if (taim === 0) setIsVideoVisible(false);
+    setProgress(taim);
   };
 
   useEffect(() => {
@@ -79,17 +82,20 @@ function App() {
           preload="auto"
           ref={videoEl}
           src={video}
+          width="100%"
+          height="100%"
+          className={isVideoVisible ? `free` : `stuck`}
           onLoadedData={handleLoadedData}
           onTimeUpdate={handleTimeUpdate}
         />
       </div>
       <section className="section section-1">
-        <div className="card w-100">Section Uno</div>
+        <div className="card w-100">1</div>
       </section>
-      <section className="section section-2"></section>
-      <section className="section section-2"></section>
-      <section className="section section-2"></section>
-      <section className="section section-2"></section>
+      <section className="section section-2">2</section>
+      <section className="section section-2">3</section>
+      <section className="section section-2">4</section>
+      <section className="section section-2">5</section>
     </>
   );
 }
