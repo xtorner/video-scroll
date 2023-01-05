@@ -56,7 +56,7 @@
   transform: all 200ms ease-out;
 }
 .scroll-warn::after {
-  opacity: 0;
+  /* opacity: 0; */
 }
 .free {
   margin: 0;
