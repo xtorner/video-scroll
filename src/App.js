@@ -24,9 +24,12 @@ function App() {
   };
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPos = window.scrollY;
+    const handleScroll = (event) => {
+      console.log(window.scrollY);
+      const scrollPos = window.scrollY / 12.5;
+      //const scrollVelocity = videoEl.current.scrollTop / event.deltaY;
       videoEl.current.currentTime = scrollPos / 10;
+      //videoEl.current.currentTime = scrollVelocity / 2;
     };
     window.addEventListener("scroll", handleScroll);
 
@@ -88,10 +91,21 @@ function App() {
           onLoadedData={handleLoadedData}
           onTimeUpdate={handleTimeUpdate}
         />
+        <div className="scroll-warn">
+          <span>Scroll Down</span>
+        </div>
       </div>
       <section className="section section-1">
         <div className="card w-100">1</div>
       </section>
+      <section className="section section-2">2</section>
+      <section className="section section-2">3</section>
+      <section className="section section-2">4</section>
+      <section className="section section-2">5</section>
+      <section className="section section-2">2</section>
+      <section className="section section-2">3</section>
+      <section className="section section-2">4</section>
+      <section className="section section-2">5</section>
       <section className="section section-2">2</section>
       <section className="section section-2">3</section>
       <section className="section section-2">4</section>
