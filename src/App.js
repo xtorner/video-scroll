@@ -109,7 +109,6 @@ function App() {
       <section className="section section-2">2</section>
       <section className="section section-2">3</section>
       <section className="section section-2">4</section>
-      <section className="section section-2">5</section>
     </>
   );
 }
