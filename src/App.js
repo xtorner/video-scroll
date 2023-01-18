@@ -80,11 +80,88 @@ function App() {
           </div>
         </nav>
       </div>
-      <section className="section section-0">FIRST LAYOUT</section>
-      <section className="section section-1">SECOND LAYOUT</section>
-      <section className="section section-1-2">THIRD LAYOUT</section>
-      <section className="section section-1-3">FOURTH LAYOUT</section>
+      <div className="static-info-1">
+        <p>
+          Empower your child with a 21st-century education to succeed in the age
+          of AI.
+        </p>
+      </div>
+      <section className="section section-0">
+        <div>
+          <h2>The Platform</h2>
+          <h3>What we offer</h3>
+          <ul>
+            <li>Mastery of AI technology</li>
+            <li>
+              Learn the ethical implications of AI and the importance of
+              responsible use of technology
+            </li>
+            <li>
+              Educational resources tailored for students between the ages of 12
+              and 17 years old
+            </li>
+          </ul>
+          <p></p>
+        </div>
+      </section>
+      <section className="section section-1">
+        <div>
+          <h2>The Platform</h2>
+          <h3>What we do</h3>
+          <ul>
+            <li>Fun and effective learning along with Kod and Aiki</li>
+            <li>
+              Project-based learning by solving real cases relevant to students'
+              lives
+            </li>
+            <li>Learning by doing and being actively involved</li>
+          </ul>
+          <p></p>
+        </div>
+      </section>
+      <section className="section section-1-2">
+        <div>
+          <h2>Plans</h2>
+          <h3>What we do</h3>
+          <ul>
+            <li>
+              Tailor-made plans according to the needs of your educational
+              institution (B2B)
+            </li>
+            <li>
+              Become a user of our educational platform and become part of a
+              worldwide community of entrepreneurs (B2C)
+            </li>
+          </ul>
+          <p></p>
+        </div>
+      </section>
+      <section className="section section-1-3">
+        <div>
+          <h2>About Us</h2>
+          <h3> </h3>
+
+          <p>
+            AI is present every day in our lives: from choosing songs in your
+            music app to recognizing your face on your cell phone. And yet,
+            children and parents do not understand how these technological tools
+            work and their possibilities and impact on society, the economy, and
+            our lives in general. The goal of AIKreate is to provide our
+            students, ages 12-17, with a set of skills to understand what AI is
+            and how AI models, their algorithms, and the data that feed them are
+            built. Programming and technology skills will make a difference in
+            the future. Most of today's jobs will be replaced by new ones.
+            AIKreate wants to positively influence your children's future so
+            that they have a future with better opportunities. Your children
+            will thank you for introducing them to 21st-century language
+            learning at an early age. We believe that teenagers need a platform
+            where they feel safe, free from advertising and distractions, with
+            easy-to-follow and fun content
+          </p>
+        </div>
+      </section>
       <section className="section section-1-4">FIFTH LAYOUT</section>
+
       <div className="video-screen">
         <video
           preload="auto"
