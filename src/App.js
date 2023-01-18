@@ -26,7 +26,7 @@ function App() {
   useEffect(() => {
     const handleScroll = (event) => {
       console.log(window.scrollY);
-      const scrollPos = window.scrollY / 12.5;
+      const scrollPos = window.scrollY / 10.5;
       //const scrollVelocity = videoEl.current.scrollTop / event.deltaY;
       videoEl.current.currentTime = scrollPos / 10;
       //videoEl.current.currentTime = scrollVelocity / 2;
@@ -80,6 +80,11 @@ function App() {
           </div>
         </nav>
       </div>
+      <section className="section section-0">FIRST LAYOUT</section>
+      <section className="section section-1">SECOND LAYOUT</section>
+      <section className="section section-1-2">THIRD LAYOUT</section>
+      <section className="section section-1-3">FOURTH LAYOUT</section>
+      <section className="section section-1-4">FIFTH LAYOUT</section>
       <div className="video-screen">
         <video
           preload="auto"
@@ -95,20 +100,7 @@ function App() {
           <span>Scroll Down</span>
         </div>
       </div>
-      <section className="section section-1">
-        <div className="card w-100">1</div>
-      </section>
-      <section className="section section-2">2</section>
-      <section className="section section-2">3</section>
-      <section className="section section-2">4</section>
-      <section className="section section-2">5</section>
-      <section className="section section-2">2</section>
-      <section className="section section-2">3</section>
-      <section className="section section-2">4</section>
-      <section className="section section-2">5</section>
-      <section className="section section-2">2</section>
-      <section className="section section-2">3</section>
-      <section className="section section-2">4</section>
+      <section className="section section-2"></section>
     </>
   );
 }
