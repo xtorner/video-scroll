@@ -25,11 +25,13 @@ function App() {
 
   useEffect(() => {
     const handleScroll = (event) => {
-      console.log(window.scrollY);
-      const scrollPos = window.scrollY / 10.5;
-      //const scrollVelocity = videoEl.current.scrollTop / event.deltaY;
-      videoEl.current.currentTime = scrollPos / 10;
-      //videoEl.current.currentTime = scrollVelocity / 2;
+      if (window.scrollY > 200) {
+        console.log(window.scrollY);
+        const scrollPos = window.scrollY / 10.5;
+        //const scrollVelocity = videoEl.current.scrollTop / event.deltaY;
+        videoEl.current.currentTime = scrollPos / 10;
+        //videoEl.current.currentTime = scrollVelocity / 2;
+      }
     };
     window.addEventListener("scroll", handleScroll);
 
@@ -87,7 +89,6 @@ function App() {
         </p>
       </div>
       <div className="video-screen">
-        testing
         <video
           preload="auto"
           ref={videoEl}
@@ -177,8 +178,6 @@ function App() {
         </div>
       </section>
       <section className="section section-1-4">FIFTH LAYOUT</section>
-
-      <section className="section section-2"></section>
     </>
   );
 }

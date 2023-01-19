@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #f2f0f2;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,8 +9,7 @@
 
 /* Head Wrapper */
 .area-top {
-  position: fixed;
-  height: 20rem;
+  height: auto;
   width: 100%;
 
   z-index: 2;
@@ -43,17 +42,15 @@
   height: 3rem;
 }
 .static-info-1 {
-  position: absolute;
+  position: relative;
   z-index: 1;
-  margin-top: 7rem;
+
   display: flex;
   flex-flow: row wrap;
-  justify-self: center;
-  justify-content: space-start;
-  padding-left: 25%;
+  justify-content: space-around;
   width: 100%;
   height: auto;
-  background-color: red;
+  background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0));
 }
 .static-info-1 p {
   width: 60%;
@@ -63,7 +60,8 @@
 }
 /* Video animation */
 .video-screen {
-  border: 1px solid red;
+  display: flex;
+  position: absolute;
   background: red;
   margin: 0;
   padding: 0;
@@ -138,11 +136,12 @@ progress[value]::-webkit-progress-value {
 .section {
   z-index: 5;
   position: relative;
-  height: auto;
+  height: 100%;
   width: 100%;
   display: flex;
   border-radius: 0.8rem;
   align-items: center;
+  background-color: red;
 }
 .section-0 {
   position: absolute;
