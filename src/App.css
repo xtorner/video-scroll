@@ -12,7 +12,7 @@
   height: auto;
   width: 100%;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
 }
 /* Menu Top Wrapper */
 .navbar-nav {
@@ -43,7 +43,7 @@
 }
 .static-info-1 {
   position: relative;
-  z-index: 100;
+  z-index: 3;
   padding-top: 5rem;
   display: flex;
   flex-flow: row wrap;
@@ -52,14 +52,22 @@
   height: auto;
 }
 .static-info-1 p {
-  width: 60%;
+  width: 50%;
+  padding: 2rem;
   font-size: 2.5rem;
-  background: linear-gradient(
+  background-color: #f2f0f275;
+  background: radial-gradient(
+    circle at center,
+    transparent 10%,
+    rgb(242, 240, 240) 90%,
+    transparent 5%
+  );
+  /* background: linear-gradient(
     to bottom,
     transparent,
-    rgb(242, 240, 242),
+    rgb(242, 240, 2),
     transparent
-  );
+  ); */
   font-weight: bolder;
 }
 /* Video animation */
@@ -104,7 +112,7 @@
 .progress-bar {
   height: 0.1rem;
   width: 100%;
-  z-index: 99;
+  z-index: 4;
   display: flex;
 }
 progress[value] {
@@ -114,7 +122,6 @@ progress[value] {
   position: fixed;
   height: 0.1rem;
   width: 100%;
-  z-index: 99;
 }
 progress[value]::-webkit-progress-bar {
   background-color: #eee;
