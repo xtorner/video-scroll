@@ -88,6 +88,7 @@ function App() {
           of AI.
         </p>
       </div>
+
       <div className="video-screen">
         <video
           preload="auto"
@@ -103,6 +104,7 @@ function App() {
           <span>Scroll Down</span>
         </div>
       </div>
+
       <section className="section section-0">
         <div>
           <h2>The Platform</h2>

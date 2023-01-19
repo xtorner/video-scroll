@@ -11,7 +11,7 @@
 .area-top {
   height: auto;
   width: 100%;
-
+  position: fixed;
   z-index: 2;
 }
 /* Menu Top Wrapper */
@@ -43,14 +43,18 @@
 }
 .static-info-1 {
   position: relative;
-  z-index: 1;
-
+  z-index: 100;
+  padding-top: 5rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   width: 100%;
   height: auto;
-  background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0));
+  background: linear-gradient(
+    to top,
+    rgba(242, 241, 242, 21),
+    rgba(255, 255, 255, 0)
+  );
 }
 .static-info-1 p {
   width: 60%;
@@ -61,15 +65,15 @@
 /* Video animation */
 .video-screen {
   display: flex;
-  position: absolute;
-  background: red;
+  align-items: flex-start;
+  position: reltive;
+  top: 0;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+
   z-index: 0;
   width: 100%;
-  height: 100vh;
-  background-color: #f2f0f2;
+  height: 100%;
 }
 .video-screen video {
   width: 100%;
