@@ -48,6 +48,13 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  background-color: #f2f0f2;
+  background: radial-gradient(
+    circle at center,
+    transparent 25%,
+    #f2f0f2 75%,
+    transparent
+  );
   width: 100%;
   height: auto;
 }
@@ -55,13 +62,7 @@
   width: 50%;
   padding: 2rem;
   font-size: 2.5rem;
-  background-color: #f2f0f275;
-  background: radial-gradient(
-    circle at center,
-    transparent 10%,
-    rgb(242, 240, 240) 90%,
-    transparent 5%
-  );
+
   /* background: linear-gradient(
     to bottom,
     transparent,
@@ -74,7 +75,7 @@
 .video-screen {
   display: flex;
   align-items: flex-start;
-  position: reltive;
+  position: absolute;
   top: 0;
   margin: 0;
   padding: 0;
