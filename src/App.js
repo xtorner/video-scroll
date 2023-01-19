@@ -86,6 +86,22 @@ function App() {
           of AI.
         </p>
       </div>
+      <div className="video-screen">
+        testing
+        <video
+          preload="auto"
+          ref={videoEl}
+          src={video}
+          width="100%"
+          height="100%"
+          className={isVideoVisible ? `free` : `stuck`}
+          onLoadedData={handleLoadedData}
+          onTimeUpdate={handleTimeUpdate}
+        />
+        <div className="scroll-warn">
+          <span>Scroll Down</span>
+        </div>
+      </div>
       <section className="section section-0">
         <div>
           <h2>The Platform</h2>
@@ -162,21 +178,6 @@ function App() {
       </section>
       <section className="section section-1-4">FIFTH LAYOUT</section>
 
-      <div className="video-screen">
-        <video
-          preload="auto"
-          ref={videoEl}
-          src={video}
-          width="100%"
-          height="100%"
-          className={isVideoVisible ? `free` : `stuck`}
-          onLoadedData={handleLoadedData}
-          onTimeUpdate={handleTimeUpdate}
-        />
-        <div className="scroll-warn">
-          <span>Scroll Down</span>
-        </div>
-      </div>
       <section className="section section-2"></section>
     </>
   );
