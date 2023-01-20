@@ -235,8 +235,26 @@ footer ul {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 1rem;
 }
+footer ul li {
+  width: 20%;
+}
+footer h3 {
+  display: flex;
+  justify-content: center;
+  font-size: 0.9rem;
+
+  font-weight: bold;
+  width: 100%;
+}
+
+.footer-claim {
+  display: flex;
+  flex-flow: row wrap;
+  width: 18rem;
+}
+
 .section-footer-free {
   z-index: 19;
   position: fixed;

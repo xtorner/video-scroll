@@ -194,9 +194,29 @@ function App() {
           <footer>
             <div className="container">
               <ul>
-                <li>xxx</li>
-                <li>zzz</li>
-                <li>yyy</li>
+                <li>
+                  <p className="footer-claim">
+                    Our mission
+                    <br />
+                    This company was created to educate young people between the
+                    ages of 12 and 17 in AI. The idea came both from the
+                    experience of teaching AI for several years in high schools
+                    and with the dream of spreading this knowledge around the
+                    world
+                  </p>
+                </li>
+                <li>
+                  <h3>THE PLATFORM</h3>
+                </li>
+                <li>
+                  <h3>PLANS</h3>
+                </li>
+                <li>
+                  <h3>COMPANY</h3>
+                </li>
+                <li>
+                  <h3>RESOURCES</h3>
+                </li>
               </ul>
             </div>
           </footer>
