@@ -30,7 +30,7 @@
   transform: all 200ms ease-in;
 }
 .nav-link a:hover {
-  color: #393939;
+  color: var(--color-text-hover);
 }
 .nav-menu {
   display: flex;
@@ -239,7 +239,6 @@ footer ul {
 }
 .section-footer-free {
   z-index: 19;
-
   display: flex;
   height: 20rem;
   box-shadow: 0 -5px 10px -5px #33333350;
@@ -250,6 +249,7 @@ footer ul {
 }
 .section-footer-blocked {
   position: relative;
+  display: none;
   bottom: 100vh;
   background-color: rgba(242, 240, 242, 0);
   transition: background-color 300ms ease-in-out;

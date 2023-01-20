@@ -1,5 +1,6 @@
 :root {
   --color-text: #191919;
+  --color-text-hover: #09090950;
 }
 body {
   margin: 0;
@@ -10,6 +11,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #f2f0f2 !important;
+  color: var(--color-text);
 }
 html {
   margin: 0;
