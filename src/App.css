@@ -239,6 +239,7 @@ footer ul {
 }
 .section-footer-free {
   z-index: 19;
+  position: fixed;
   display: flex;
   height: 20rem;
   box-shadow: 0 -5px 10px -5px #33333350;
