@@ -9,7 +9,9 @@ function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVideoVisible, setIsVideoVisible] = useState(false);
   const [progress, setProgress] = useState(0);
+  const [classFooter, setClassFooter] = useState("section-footer-blocked");
   const videoEl = useRef(null);
+  const footer = useRef(null);
 
   const handleLoadedData = () => {
     setProgress((videoEl.current.duration / 100) * progress);
@@ -26,10 +28,16 @@ function App() {
   useEffect(() => {
     const handleScroll = (event) => {
       if (window.scrollY > 200) {
-        console.log(window.scrollY);
         const scrollPos = window.scrollY / 10.5;
+        console.log(window.scrollY, videoEl.current.duration);
         //const scrollVelocity = videoEl.current.scrollTop / event.deltaY;
         videoEl.current.currentTime = scrollPos / 10;
+        setClassFooter(
+          window.scrollY > 2231
+            ? "section-footer-free"
+            : "section-footer-blocked"
+        );
+
         //videoEl.current.currentTime = scrollVelocity / 2;
       }
     };
@@ -179,7 +187,21 @@ function App() {
           </p>
         </div>
       </section>
+      <section className="section section-1-3"></section>
       <section className="section section-1-4">FIFTH LAYOUT</section>
+      <section className="section section-1-5">
+        <div className={classFooter} ref={footer}>
+          <footer>
+            <div className="container">
+              <ul>
+                <li>xxx</li>
+                <li>zzz</li>
+                <li>yyy</li>
+              </ul>
+            </div>
+          </footer>
+        </div>
+      </section>
     </>
   );
 }
