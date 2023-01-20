@@ -38,7 +38,6 @@
   width: 100%;
   justify-content: space-around;
   align-items: center;
-
   height: 3rem;
 }
 .static-info-1 {
@@ -58,8 +57,10 @@
   width: 100%;
   height: auto;
 }
-.static-info-1 p {
-  width: 50%;
+.static-info-1 h1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
   padding: 2rem;
   font-size: 2.5rem;
 
@@ -242,20 +243,33 @@ footer ul li {
   width: 20%;
 }
 footer h3 {
+  font-weight: bold;
+  font-size: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer p {
   display: flex;
   justify-content: flex-end;
   font-size: 0.9rem;
 
-  font-weight: bold;
   width: 100%;
+  font-family: "riffic-light", sans-serif !important;
 }
-
+footer p a {
+  text-decoration: none;
+  color: inherit;
+}
 .footer-claim {
   display: flex;
   flex-flow: row wrap;
   width: 18rem;
 }
-
+.footer-claim strong {
+  display: flex;
+  justify-content: flex-start !important;
+}
 .section-footer-free {
   z-index: 19;
   position: fixed;
@@ -280,10 +294,10 @@ footer h3 {
   width: 200px;
   justify-content: flex-end;
   margin-right: 20%;
-
   top: 28rem;
   padding-bottom: 10rem;
 }
+
 /* SCROLL RELATED */
 body::-webkit-scrollbar {
   --scrollbar-foreground: #406eb550;

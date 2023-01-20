@@ -91,10 +91,10 @@ function App() {
         </nav>
       </div>
       <div className="static-info-1">
-        <p>
+        <h1>
           Empower your child with a 21st-century education to succeed in the age
           of AI.
-        </p>
+        </h1>
       </div>
 
       <div className="video-screen">
@@ -207,15 +207,33 @@ function App() {
                 </li>
                 <li>
                   <h3>THE PLATFORM</h3>
+                  <p>
+                    <a href="#whatweoffer">What we offer</a>
+                  </p>
+                  <p>
+                    <a href="#whatwedo">What we do</a>
+                  </p>
                 </li>
                 <li>
                   <h3>PLANS</h3>
                 </li>
                 <li>
                   <h3>COMPANY</h3>
+                  <p>
+                    <a href="#about-us">About Us</a>
+                  </p>
+                  <p>
+                    <a href="#the-team">The Team</a>
+                  </p>
+                  <p>
+                    <a href="#contact-us">Contact Us</a>
+                  </p>
                 </li>
                 <li>
                   <h3>RESOURCES</h3>
+                  <p>
+                    <a href="#blog">Blog</a>
+                  </p>
                 </li>
               </ul>
             </div>
