@@ -49,8 +49,8 @@ function App() {
         element4:
           sY > 875 && sY < 1180 ? !elements.element4 : elements.element4,
         element5:
-          sY > 1150 && sY < 1456 ? !elements.element5 : elements.element5,
-        element6: sY > 1350 ? !elements.element6 : elements.element6,
+          sY > 1150 && sY < 1400 ? !elements.element5 : elements.element5,
+        element6: sY > 1410 ? !elements.element6 : elements.element6,
       });
       if (window.scrollY > 10) {
         const scrollPos = window.scrollY / 10.5;
