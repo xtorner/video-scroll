@@ -24,7 +24,20 @@ function App() {
     element5: false,
     element6: false,
   });
+  const anchor1Ref = useRef(null);
+  const anchor2Ref = useRef(null);
+  const anchor3Ref = useRef(null);
 
+  const refs = new Map([
+    ["anchor1", anchor1Ref],
+    ["anchor2", anchor2Ref],
+    ["anchor3", anchor3Ref],
+  ]);
+
+  const handleAnchor = (anchorId) => {
+    const anchorRef = refs.get(anchorId);
+    anchorRef.current.scrollIntoView({ behavior: "smooth" });
+  };
   const handleLoadedData = () => {
     setProgress((videoEl.current.duration / 100) * progress);
   };
@@ -38,6 +51,7 @@ function App() {
   };
 
   useEffect(() => {
+    // 1 scroll down | 2 theplatform | 3 plans | 4
     const handleScroll = (event) => {
       console.log("scrollpos:", window.scrollY);
       let sY = window.scrollY;
@@ -120,12 +134,20 @@ function App() {
               <div className="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul className="navbar-nav">
                   <li className="nav-item active">
-                    <NavLink className="nav-link" href="#">
+                    <NavLink
+                      className="nav-link"
+                      href="#anchor1"
+                      onClick={() => handleAnchor("anchor1")}
+                    >
                       The Platform
                     </NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink className="nav-link" href="#">
+                    <NavLink
+                      className="nav-link"
+                      href="#anchor2"
+                      onClick={() => handleAnchor("anchor2")}
+                    >
                       Plans
                     </NavLink>
                   </li>
@@ -179,7 +201,7 @@ function App() {
               onTimeUpdate={handleTimeUpdate}
             />
           </div>
-
+          <div ref={anchor1Ref} id="anchor1" className="anchor1"></div>
           <section
             className={`section section-0 fade ${
               elements.element2 ? "visible" : "hidden"
@@ -214,7 +236,7 @@ function App() {
               </div>
             </div>
           </section>
-
+          <div ref={anchor2Ref} id="anchor2" className="anchor2"></div>
           <section
             className={`section section-1 fade ${
               elements.element3 ? "visible" : "hidden"
@@ -236,27 +258,6 @@ function App() {
           <section
             className={`section section-1-2 fade ${
               elements.element4 ? "visible" : "hidden"
-            }`}
-          >
-            <div>
-              <h2>About us</h2>
-
-              <ul>
-                <li>
-                  Tailor-made plans according to the needs of your educational
-                  institution (B2B)
-                </li>
-                <li>
-                  Become a user of our educational platform and become part of a
-                  worldwide community of entrepreneurs (B2C)
-                </li>
-              </ul>
-              <p></p>
-            </div>
-          </section>
-          <section
-            className={`section section-1-3 fade ${
-              elements.element5 ? "visible" : "hidden"
             }`}
           >
             <div>
@@ -282,6 +283,17 @@ function App() {
               </p>
             </div>
           </section>
+          <section
+            className={`section section-1-3 fade ${
+              elements.element5 ? "visible" : "hidden"
+            }`}
+          >
+            <div>
+              <h2>The Team</h2>
+
+              <p>PARALEL IMAGE CARROUSSEL</p>
+            </div>
+          </section>
 
           <section
             className={`section section-1-4 fade ${
@@ -289,21 +301,9 @@ function App() {
             }`}
           >
             <div>
-              <h2>last one</h2>
+              <h2>Contact Us</h2>
 
-              <p>
-                Consectetur voluptate reprehenderit cillum in. Id qui incididunt
-                exercitation ea irure eiusmod laborum esse. Laborum sint ipsum
-                culpa nostrud velit. Cillum ad ipsum et nostrud mollit nulla
-                reprehenderit consectetur irure. Lorem tempor mollit dolor
-                veniam officia irure laboris nostrud mollit eiusmod. Aliquip
-                excepteur do aliqua deserunt reprehenderit fugiat anim ut
-                proident est. Irure laborum sint ipsum esse non pariatur nisi ad
-                officia fugiat sunt id laborum. Nostrud id aliqua magna
-                cupidatat. Dolore aliquip eiusmod officia laboris nisi aliquip
-                elit velit occaecat sunt Lorem aliqua proident amet. Eu fugiat
-                aliquip aute amet.
-              </p>
+              <p>CONTACT FORM</p>
             </div>
           </section>
 

@@ -37,7 +37,7 @@
   height: auto;
   width: 100%;
   position: fixed;
-  z-index: 3;
+  z-index: 9999 !important;
 }
 /* Menu Top Wrapper */
 .navbar-nav {
@@ -252,7 +252,7 @@ progress[value]::-webkit-progress-value {
   justify-content: center;
   left: 50px;
   background-color: #f2bfbe75;
-  top: 100rem;
+  top: 91rem;
 }
 section p,
 section h2,
@@ -415,3 +415,15 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* SMOKE END */
+
+/* anchors */
+.anchor1 {
+  top: 12rem;
+  position: absolute;
+  border: 1px solid red;
+}
+.anchor2 {
+  top: 45rem;
+  position: absolute;
+  border: 1px solid red;
+}
