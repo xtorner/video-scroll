@@ -215,31 +215,34 @@ progress[value]::-webkit-progress-value {
   z-index: 10;
   /* visibility: hidden; */
   top: 30rem;
-  height: 20rem;
+  height: auto;
+  padding: 2rem;
   background-color: #85d4ac75;
   display: flex;
   width: 100%;
   justify-content: center;
 }
+.theplatform {
+}
 .section-1 {
   position: absolute;
   display: flex;
-  width: 50%;
+  width: 49%;
   height: 25rem;
   justify-content: center;
   left: 0px;
   background-color: #f2c67f75;
-  top: 60rem;
+  top: 55rem;
 }
 .section-1-2 {
   position: absolute;
   display: flex;
-  width: 50%;
+  width: 49%;
   height: 30rem;
   justify-content: center;
   right: 0px;
   background-color: #f6e2a675;
-  top: 80rem;
+  top: 60rem;
 }
 .section-1-3 {
   position: absolute;

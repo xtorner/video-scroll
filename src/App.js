@@ -46,6 +46,9 @@ function App() {
         element1: sY >= 0 && sY < 120 ? elements.element1 : !elements.element1,
         element2: sY > 150 && sY < 580 ? !elements.element2 : elements.element2,
         element3: sY > 580 && sY < 980 ? !elements.element3 : elements.element3,
+        element4: sY > 680 && sY < 980 ? !elements.element4 : elements.element4,
+        element5:
+          sY > 1000 && sY < 1280 ? !elements.element5 : elements.element5,
       });
       if (window.scrollY > 10) {
         const scrollPos = window.scrollY / 10.5;
@@ -53,7 +56,7 @@ function App() {
         //const scrollVelocity = videoEl.current.scrollTop / event.deltaY;
         videoEl.current.currentTime = scrollPos / 10;
         setClassFooter(
-          window.scrollY > 2231
+          window.scrollY > 1775
             ? "section-footer-free"
             : "section-footer-blocked"
         );
@@ -180,21 +183,33 @@ function App() {
               elements.element2 ? "visible" : "hidden"
             }`}
           >
-            <div>
+            <div className="theplatform">
               <h2>The Platform</h2>
-              <h3>What we offer</h3>
-              <ul>
-                <li>Mastery of AI technology</li>
-                <li>
-                  Learn the ethical implications of AI and the importance of
-                  responsible use of technology
-                </li>
-                <li>
-                  Educational resources tailored for students between the ages
-                  of 12 and 17 years old
-                </li>
-              </ul>
-              <p></p>
+              <div>
+                <h3>What we offer</h3>
+                <ul>
+                  <li>Mastery of AI technology</li>
+                  <li>
+                    Learn the ethical implications of AI and the importance of
+                    responsible use of technology
+                  </li>
+                  <li>
+                    Educational resources tailored for students between the ages
+                    of 12 and 17 years old
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3>What we do</h3>
+                <ul>
+                  <li>Fun and effective learning along with Kod and Aiki</li>
+                  <li>
+                    Project-based learning by solving real cases relevant to
+                    students' lives
+                  </li>
+                  <li>Learning by doing and being actively involved</li>
+                </ul>
+              </div>
             </div>
           </section>
 
@@ -204,17 +219,16 @@ function App() {
             }`}
           >
             <div>
-              <h2>The Platform</h2>
-              <h3>What we do</h3>
-              <ul>
-                <li>Fun and effective learning along with Kod and Aiki</li>
-                <li>
-                  Project-based learning by solving real cases relevant to
-                  students' lives
-                </li>
-                <li>Learning by doing and being actively involved</li>
-              </ul>
-              <p></p>
+              <h2>Plans</h2>
+              <p>
+                Tailor-made plans according to the needs of your educational
+                institution (B2B)
+              </p>
+              <p>
+                Become a user of our educational platform and become part of a
+                worldwide community of entrepreneurs (B2C)
+              </p>
+              <div>xx</div>
             </div>
           </section>
           <section
@@ -223,7 +237,7 @@ function App() {
             }`}
           >
             <div>
-              <h2>Plans</h2>
+              <h2>About us</h2>
               <h3>What we do</h3>
               <ul>
                 <li>
@@ -246,7 +260,6 @@ function App() {
             <div>
               <h2>About Us</h2>
               <h3> </h3>
-
               <p>
                 AI is present every day in our lives: from choosing songs in
                 your music app to recognizing your face on your cell phone. And
@@ -267,8 +280,7 @@ function App() {
               </p>
             </div>
           </section>
-          <section className="section section-1-3"></section>
-          <section className="section section-1-4">FIFTH LAYOUT</section>
+
           <section className="section section-1-5">
             <div className={classFooter} ref={footer}>
               <footer>
