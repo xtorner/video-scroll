@@ -427,3 +427,7 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   border: 1px solid red;
 }
+
+.can {
+  z-index: 999 !important;
+}

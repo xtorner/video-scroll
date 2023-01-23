@@ -7,6 +7,8 @@ import video from "./assets/vid.mp4";
 import { NavLink } from "react-bootstrap";
 import useWindowResize from "./components/hooks/windowresize";
 import LoaderBlock from "./components/utils/loader-block/LoaderBlock";
+import BackgroundWithText from "./components/utils/BackgroundWithText";
+import ImageCarousel from "./components/utils/ImageCarousel";
 // import SmokeScene from "./components/utils/smoke/Smoke";
 
 function App() {
@@ -252,7 +254,6 @@ function App() {
                 Become a user of our educational platform and become part of a
                 worldwide community of entrepreneurs (B2C)
               </p>
-              <div>xx</div>
             </div>
           </section>
           <section
@@ -260,7 +261,7 @@ function App() {
               elements.element4 ? "visible" : "hidden"
             }`}
           >
-            <div>
+            <BackgroundWithText>
               <h2>About Us</h2>
 
               <p>
@@ -281,7 +282,7 @@ function App() {
                 feel safe, free from advertising and distractions, with
                 easy-to-follow and fun content
               </p>
-            </div>
+            </BackgroundWithText>
           </section>
           <section
             className={`section section-1-3 fade ${
@@ -290,8 +291,15 @@ function App() {
           >
             <div>
               <h2>The Team</h2>
-
               <p>PARALEL IMAGE CARROUSSEL</p>
+              <ImageCarousel
+                images={[
+                  "cursor.png",
+                  "cursor.png",
+                  "cursor.png",
+                  "cursor.png",
+                ]}
+              ></ImageCarousel>
             </div>
           </section>
 
