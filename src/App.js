@@ -45,10 +45,12 @@ function App() {
         ...elements,
         element1: sY >= 0 && sY < 120 ? elements.element1 : !elements.element1,
         element2: sY > 150 && sY < 580 ? !elements.element2 : elements.element2,
-        element3: sY > 580 && sY < 980 ? !elements.element3 : elements.element3,
-        element4: sY > 680 && sY < 980 ? !elements.element4 : elements.element4,
+        element3: sY > 680 && sY < 910 ? !elements.element3 : elements.element3,
+        element4:
+          sY > 875 && sY < 1180 ? !elements.element4 : elements.element4,
         element5:
-          sY > 1000 && sY < 1280 ? !elements.element5 : elements.element5,
+          sY > 1150 && sY < 1456 ? !elements.element5 : elements.element5,
+        element6: sY > 1350 ? !elements.element6 : elements.element6,
       });
       if (window.scrollY > 10) {
         const scrollPos = window.scrollY / 10.5;
@@ -76,7 +78,7 @@ function App() {
   //   document.addEventListener("contextmenu", (event) => event.preventDefault());
   // }, []);
 
-  useWindowResize(videoEl);
+  //useWindowResize(videoEl);
 
   const handleLoadVideo = () => {
     setIsLoading(false);
@@ -238,7 +240,7 @@ function App() {
           >
             <div>
               <h2>About us</h2>
-              <h3>What we do</h3>
+
               <ul>
                 <li>
                   Tailor-made plans according to the needs of your educational
@@ -259,7 +261,7 @@ function App() {
           >
             <div>
               <h2>About Us</h2>
-              <h3> </h3>
+
               <p>
                 AI is present every day in our lives: from choosing songs in
                 your music app to recognizing your face on your cell phone. And
@@ -277,6 +279,30 @@ function App() {
                 early age. We believe that teenagers need a platform where they
                 feel safe, free from advertising and distractions, with
                 easy-to-follow and fun content
+              </p>
+            </div>
+          </section>
+
+          <section
+            className={`section section-1-4 fade ${
+              elements.element6 ? "visible" : "hidden"
+            }`}
+          >
+            <div>
+              <h2>last one</h2>
+
+              <p>
+                Consectetur voluptate reprehenderit cillum in. Id qui incididunt
+                exercitation ea irure eiusmod laborum esse. Laborum sint ipsum
+                culpa nostrud velit. Cillum ad ipsum et nostrud mollit nulla
+                reprehenderit consectetur irure. Lorem tempor mollit dolor
+                veniam officia irure laboris nostrud mollit eiusmod. Aliquip
+                excepteur do aliqua deserunt reprehenderit fugiat anim ut
+                proident est. Irure laborum sint ipsum esse non pariatur nisi ad
+                officia fugiat sunt id laborum. Nostrud id aliqua magna
+                cupidatat. Dolore aliquip eiusmod officia laboris nisi aliquip
+                elit velit occaecat sunt Lorem aliqua proident amet. Eu fugiat
+                aliquip aute amet.
               </p>
             </div>
           </section>
