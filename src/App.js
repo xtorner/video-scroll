@@ -209,7 +209,7 @@ function App() {
               elements.element2 ? "visible" : "hidden"
             }`}
           >
-            <div className="theplatform">
+            <BackgroundWithText>
               <h2>The Platform</h2>
               <div>
                 <h3>What we offer</h3>
@@ -236,7 +236,7 @@ function App() {
                   <li>Learning by doing and being actively involved</li>
                 </ul>
               </div>
-            </div>
+            </BackgroundWithText>
           </section>
           <div ref={anchor2Ref} id="anchor2" className="anchor2"></div>
           <section
@@ -244,7 +244,7 @@ function App() {
               elements.element3 ? "visible" : "hidden"
             }`}
           >
-            <div>
+            <BackgroundWithText>
               <h2>Plans</h2>
               <p>
                 Tailor-made plans according to the needs of your educational
@@ -254,7 +254,7 @@ function App() {
                 Become a user of our educational platform and become part of a
                 worldwide community of entrepreneurs (B2C)
               </p>
-            </div>
+            </BackgroundWithText>
           </section>
           <section
             className={`section section-1-2 fade ${
@@ -266,21 +266,29 @@ function App() {
 
               <p>
                 AI is present every day in our lives: from choosing songs in
-                your music app to recognizing your face on your cell phone. And
-                yet, children and parents do not understand how these
+                your music app to recognizing your face on your cell phone.
+                <br />
+                And yet, children and parents do not understand how these
                 technological tools work and their possibilities and impact on
-                society, the economy, and our lives in general. The goal of
-                AIKreate is to provide our students, ages 12-17, with a set of
-                skills to understand what AI is and how AI models, their
-                algorithms, and the data that feed them are built. Programming
-                and technology skills will make a difference in the future. Most
-                of today's jobs will be replaced by new ones. AIKreate wants to
-                positively influence your children's future so that they have a
-                future with better opportunities. Your children will thank you
-                for introducing them to 21st-century language learning at an
-                early age. We believe that teenagers need a platform where they
-                feel safe, free from advertising and distractions, with
-                easy-to-follow and fun content
+                society, the economy, and our lives in general.
+                <br />
+                The goal of AIKreate is to provide our students, ages 12-17,
+                with a set of skills to understand what AI is and how AI models,
+                their algorithms, and the data that feed them are built.
+                <br />
+                Programming and technology skills will make a difference in the
+                future.
+                <br />
+                Most of today's jobs will be replaced by new ones.
+                <br />
+                AIKreate wants to positively influence your children's future so
+                that they have a future with better opportunities.
+                <br />
+                Your children will thank you for introducing them to
+                21st-century language learning at an early age. We believe that
+                teenagers need a platform where they feel safe, free from
+                advertising and distractions, with easy-to-follow and fun
+                content.
               </p>
             </BackgroundWithText>
           </section>
@@ -289,7 +297,7 @@ function App() {
               elements.element5 ? "visible" : "hidden"
             }`}
           >
-            <div>
+            <BackgroundWithText>
               <h2>The Team</h2>
               <p>PARALEL IMAGE CARROUSSEL</p>
               <ImageCarousel
@@ -300,7 +308,7 @@ function App() {
                   "cursor.png",
                 ]}
               ></ImageCarousel>
-            </div>
+            </BackgroundWithText>
           </section>
 
           <section
@@ -308,11 +316,11 @@ function App() {
               elements.element6 ? "visible" : "hidden"
             }`}
           >
-            <div>
+            <BackgroundWithText>
               <h2>Contact Us</h2>
 
               <p>CONTACT FORM</p>
-            </div>
+            </BackgroundWithText>
           </section>
 
           <section className="section section-1-5">

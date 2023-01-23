@@ -428,6 +428,9 @@ body::-webkit-scrollbar-thumb {
   border: 1px solid red;
 }
 
-.can {
-  z-index: 999 !important;
+.child {
+  display: flex;
+  left: 0;
+  right: 0;
+  position: absolute;
 }
