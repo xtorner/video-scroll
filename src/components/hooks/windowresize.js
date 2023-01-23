@@ -8,8 +8,8 @@ const useWindowResize = (videoEl) => {
       let video = videoEl;
 
       video.current.style.width = width + "px";
-      //video.current.style.height = height + "px";
-      //video.current.style.margin = "0px";
+      video.current.style.height = height + "px";
+      video.current.style.margin = "0px";
     }
 
     window.addEventListener("resize", handleResize);

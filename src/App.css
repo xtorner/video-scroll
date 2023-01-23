@@ -1,3 +1,28 @@
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade {
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+
+.fade.visible {
+  opacity: 1;
+}
+
+.fade.hidden {
+  opacity: 0;
+}
+
 .App {
   text-align: center;
 
@@ -41,36 +66,56 @@
   height: 3rem;
 }
 .static-info-1 {
-  position: relative;
-  z-index: 3;
-  padding-top: 5rem;
+  position: fixed;
+  text-transform: uppercase;
+  z-index: 2;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-
-  /* background: radial-gradient(
-    circle at center,
-    transparent 25%,
-    #f2f0f2 75%,
-    transparent
-  ); */
-  width: 100%;
-  height: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  margin-left: 5rem;
+  width: 50%;
+  height: 100vh;
+  background-color: #f1f2f125;
 }
 .static-info-1 h1 {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 2rem;
-  font-size: 2.5rem;
+  padding: 0;
+  padding-top: 2rem;
 
-  background: linear-gradient(
+  font-family: "riffic-medium", sans-serif !important;
+  font-size: 2rem;
+  color: #191919;
+  text-align: center;
+  letter-spacing: 0.05rem;
+  /* background: linear-gradient(
     to bottom,
     transparent,
     rgb(242, 240, 242),
     transparent
-  );
-  font-weight: bolder;
+  ); */
+  border-radius: 1.8rem;
+}
+.static-info-1 span {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: "riffic-light", sans-serif !important;
+  font-size: 2.8rem;
+}
+.static-info-1 strong {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: "riffic-light", sans-serif !important;
+  font-size: 3.2rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px dotted #191919;
 }
 /* Video animation */
 .video-screen {
@@ -88,23 +133,34 @@
   width: 100%;
 }
 .scroll-warn {
-  position: fixed;
-  bottom: 0px;
-  left: 10px;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   transform: all 200ms ease-out;
+  animation: blink 2s infinite;
+}
+.scroll-warn span {
+  font-size: 1rem;
 }
 .scroll-warn::after {
   /* opacity: 0; */
 }
+.arrow {
+  animation: blink 2s infinite;
+}
+.arrow svg {
+  width: 1rem;
+  height: 1rem;
+  transform: rotate(90deg);
+}
 .free {
-  margin: 0;
-  padding: 0;
-
   position: fixed;
 }
 .stuck {
-  margin: 0;
-  padding: 0;
   position: fixed;
 }
 /* End Video Animation */
@@ -156,6 +212,8 @@ progress[value]::-webkit-progress-value {
 }
 .section-0 {
   position: absolute;
+  z-index: 10;
+  /* visibility: hidden; */
   top: 30rem;
   height: 20rem;
   background-color: #85d4ac75;
@@ -275,9 +333,9 @@ footer p a {
   position: fixed;
   display: flex;
   height: 20rem;
-  box-shadow: 0 -5px 10px -5px #33333350;
+  box-shadow: 0 -5px 1px -5px #33333350;
   background: rgba(242, 240, 242, 0.908);
-  transition: all 300ms ease-in-out;
+  transition: all 500ms ease-in-out;
   bottom: 0rem;
   width: 100%; /* align-content: flex-start; */
 }
@@ -285,6 +343,7 @@ footer p a {
   position: relative;
   display: none;
   bottom: 100vh;
+  transition: all 500ms ease-in-out;
   background-color: rgba(242, 240, 242, 0);
   transition: background-color 300ms ease-in-out;
   width: 100%; /* align-content: flex-start; */
@@ -315,3 +374,41 @@ body::-webkit-scrollbar-thumb {
   background: linear-gradient(-45deg, #406eb5, #406eb590);
 }
 /* END SCROLL RELATED */
+
+/* SMOKE */
+.smoke {
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* background-image: radial-gradient(circle at 60% 150%, #959595, #373737);
+  animation: smoke-animation 4s ease-in-out infinite; */
+}
+
+@keyframes smoke-animation {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  25% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  75% {
+    transform: scale(1.5);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0.8;
+  }
+}
+
+/* SMOKE END */
