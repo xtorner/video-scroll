@@ -59,7 +59,7 @@ function App() {
       let sY = window.scrollY;
       setElements({
         ...elements,
-        element1: sY >= 0 && sY < 120 ? elements.element1 : !elements.element1,
+        element1: sY >= 0 && sY < 115 ? elements.element1 : !elements.element1,
         element2: sY > 150 && sY < 580 ? !elements.element2 : elements.element2,
         element3: sY > 680 && sY < 910 ? !elements.element3 : elements.element3,
         element4:
@@ -168,12 +168,18 @@ function App() {
               elements.element1 ? "visible" : "hidden"
             }`}
           >
-            <h1>Empower your child</h1>
-            <span> with a 21st-century education</span>
-            <strong>to succeed in the age of AI</strong>
-
+            <h1>
+              Empower your child
+              <br />
+              with a 21st-century education to <br />
+              succeed in the age of AI
+            </h1>
+            <strong></strong>
             <div className="scroll-warn">
-              <span>Scroll down</span>
+              <a href="#anchor1" onClick={() => handleAnchor("anchor1")}>
+                Scroll down
+              </a>
+
               <div className="arrow">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -224,8 +230,7 @@ function App() {
                     of 12 and 17 years old
                   </li>
                 </ul>
-              </div>
-              <div>
+                <br />
                 <h3>What we do</h3>
                 <ul>
                   <li>Fun and effective learning along with Kod and Aiki</li>
