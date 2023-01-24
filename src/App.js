@@ -253,14 +253,25 @@ function App() {
           >
             <BackgroundWithText>
               <h2>Plans</h2>
-              <p>
-                Tailor-made plans according to the needs of your educational
-                institution (B2B)
-              </p>
-              <p>
-                Become a user of our educational platform and become part of a
-                worldwide community of entrepreneurs (B2C)
-              </p>
+              <div className="paragraf">
+                <p>
+                  Tailor-made plans according to the needs of your educational
+                  institution (B2B)
+                </p>
+                <p>
+                  Become a user of our educational platform and become part of a
+                  worldwide community of entrepreneurs (B2C)
+                </p>
+              </div>
+              <div className="carroussel">
+                <ul>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                </ul>
+              </div>
             </BackgroundWithText>
           </section>
           <div ref={anchor3Ref} id="anchor3" className="anchor3"></div>
