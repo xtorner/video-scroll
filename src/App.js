@@ -202,6 +202,8 @@ function App() {
             }
           >
             <video
+              playsinline
+              muted
               preload="auto"
               ref={videoEl}
               src={video}
