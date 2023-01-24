@@ -13,8 +13,8 @@ const BackgroundWithText = ({ children }) => {
     const n = new noise.Noise(Math.random());
     let points = "";
     for (let a = 0; a < 8 * Math.PI; a += 0.0015) {
-      const x = 200 / 2 + 130 * n.perlin2(a, a) * Math.cos(a * a * Math.PI);
-      const y = 200 / 2 + 130 * n.perlin2(a, a) * Math.sin((a * a) ^ 6);
+      const x = 300 / 5 + 140 * n.perlin2(a, a) * Math.cos(a * a * Math.PI);
+      const y = 60 / 0.98 + 60 * n.perlin2(a, a) * Math.sin(a * Math.sin(a));
       points += `${x},${y} `;
     }
     setCloudPoints(points);
@@ -31,8 +31,8 @@ const BackgroundWithText = ({ children }) => {
 };
 
 const getRandomColor = () => {
-  const color1 = "#ffffff";
-  const color2 = "#ffffff";
+  const color1 = "#f1f2f1";
+  const color2 = "#f2f1f2";
 
   function blendColors(color1, color2, ratio = 0.5) {
     const color1Array = color1.match(/\w{2}/g).map((x) => parseInt(x, 16));

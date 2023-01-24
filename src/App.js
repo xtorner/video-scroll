@@ -213,7 +213,7 @@ function App() {
           </div>
           <div ref={anchor1Ref} id="anchor1" className="anchor1"></div>
           <section
-            className={`section section-0 fade ${
+            className={`section section-platform fade ${
               elements.element2 ? "visible" : "hidden"
             }`}
           >
@@ -247,7 +247,7 @@ function App() {
           </section>
           <div ref={anchor2Ref} id="anchor2" className="anchor2"></div>
           <section
-            className={`section section-1 fade ${
+            className={`section section-plans fade ${
               elements.element3 ? "visible" : "hidden"
             }`}
           >
@@ -263,16 +263,15 @@ function App() {
               </p>
             </BackgroundWithText>
           </section>
-          Ç<div ref={anchor3Ref} id="anchor3" className="anchor3"></div>
+          <div ref={anchor3Ref} id="anchor3" className="anchor3"></div>
           <section
-            className={`section section-1-2 fade ${
+            className={`section section-about-us fade ${
               elements.element4 ? "visible" : "hidden"
             }`}
           >
             <BackgroundWithText>
               <h2>About Us</h2>
-
-              <p>
+              {/* <p>
                 AI is present every day in our lives: from choosing songs in
                 your music app to recognizing your face on your cell phone.
                 <br />
@@ -297,7 +296,7 @@ function App() {
                 teenagers need a platform where they feel safe, free from
                 advertising and distractions, with easy-to-follow and fun
                 content.
-              </p>
+              </p> */}
             </BackgroundWithText>
           </section>
           <section
