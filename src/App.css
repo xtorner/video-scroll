@@ -236,21 +236,20 @@ progress[value]::-webkit-progress-value {
 .theplatform {
 }
 .section-plans {
-  position: absolute;
   display: flex;
-  width: 49%;
+  width: 50%;
   height: 25rem;
-
+  margin-right: 2rem;
   right: 0px;
   left: 50%;
   background-color: #f2c67f95;
-
+  flex-direction: column;
   top: 55rem;
   border: 1px solid red;
   align-items: center;
   justify-content: flex-start;
 }
-.section-plans .paragraf p {
+.section-plans .paragraf {
   height: 100%;
   margin-top: 1%;
   display: flex;
@@ -262,12 +261,17 @@ progress[value]::-webkit-progress-value {
 }
 .section-plans .paragraf {
   display: flex;
+  flex-direction: row;
+  height: 100%;
+  border: 1px solid red;
   width: 100%;
 }
 .section-plans h2 {
   display: flex;
-  width: 100%;
+  flex-direction: row;
+  width: auto;
   height: 3rem;
+  border: 1px solid red;
 }
 .section-about-us {
   position: absolute;
