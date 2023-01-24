@@ -61,9 +61,9 @@ function App() {
         ...elements,
         element1: sY >= 0 && sY < 115 ? elements.element1 : !elements.element1,
         element2: sY > 150 && sY < 580 ? !elements.element2 : elements.element2,
-        element3: sY > 680 && sY < 910 ? !elements.element3 : elements.element3,
+        element3: sY > 660 && sY < 860 ? !elements.element3 : elements.element3,
         element4:
-          sY > 875 && sY < 1180 ? !elements.element4 : elements.element4,
+          sY > 860 && sY < 1180 ? !elements.element4 : elements.element4,
         element5:
           sY > 1150 && sY < 1400 ? !elements.element5 : elements.element5,
         element6: sY > 1410 ? !elements.element6 : elements.element6,
@@ -253,16 +253,17 @@ function App() {
           >
             <BackgroundWithText>
               <h2>Plans</h2>
-              <div className="paragraf">
-                <p>
-                  Tailor-made plans according to the needs of your educational
-                  institution (B2B)
-                </p>
-                <p>
-                  Become a user of our educational platform and become part of a
-                  worldwide community of entrepreneurs (B2C)
-                </p>
-
+              <div className="plans-wrapper">
+                <div className="paragraf">
+                  <p>
+                    Tailor-made plans according to the needs of your educational
+                    institution (B2B)
+                  </p>
+                  <p>
+                    Become a user of our educational platform and become part of
+                    a worldwide community of entrepreneurs (B2C)
+                  </p>
+                </div>
                 <div className="carroussel">
                   <ul>
                     <li>1</li>
