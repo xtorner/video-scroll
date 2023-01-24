@@ -236,10 +236,10 @@ progress[value]::-webkit-progress-value {
   display: flex;
   width: 49%;
   height: 25rem;
-  justify-content: flex-start;
-  left: 0px;
-  margin-left: 3rem;
-  background-color: #f2c67f25;
+  justify-content: flex-end;
+  right: 0px;
+  margin-right: 3rem;
+  background-color: #f2c67f95;
 
   top: 55rem;
   padding: 1rem;
@@ -252,10 +252,10 @@ progress[value]::-webkit-progress-value {
   width: 49%;
   height: 30rem;
   justify-content: center;
-  right: 0px;
+  left: 200px;
   padding: 1rem;
   background-color: #f6e2a675;
-  top: 60rem;
+  top: 70rem;
 }
 .section-1-3 {
   position: absolute;
@@ -438,6 +438,11 @@ body::-webkit-scrollbar-thumb {
 }
 .anchor2 {
   top: 45rem;
+  position: absolute;
+  border: 1px solid red;
+}
+.anchor3 {
+  top: 60rem;
   position: absolute;
   border: 1px solid red;
 }

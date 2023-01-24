@@ -154,7 +154,11 @@ function App() {
                     </NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink className="nav-link" href="#">
+                    <NavLink
+                      className="nav-link"
+                      href="#anchor3"
+                      onClick={() => handleAnchor("anchor3")}
+                    >
                       Company
                     </NavLink>
                   </li>
@@ -162,7 +166,6 @@ function App() {
               </div>
             </nav>
           </div>
-
           <div
             className={`static-info-1 fade ${
               elements.element1 ? "visible" : "hidden"
@@ -193,7 +196,6 @@ function App() {
               </div>
             </div>
           </div>
-
           <div
             className={
               isVideoVisible ? ` video-screen stuck` : `video-screen free`
@@ -261,6 +263,7 @@ function App() {
               </p>
             </BackgroundWithText>
           </section>
+          Ç<div ref={anchor3Ref} id="anchor3" className="anchor3"></div>
           <section
             className={`section section-1-2 fade ${
               elements.element4 ? "visible" : "hidden"
@@ -315,7 +318,6 @@ function App() {
               ></ImageCarousel>
             </BackgroundWithText>
           </section>
-
           <section
             className={`section section-1-4 fade ${
               elements.element6 ? "visible" : "hidden"
@@ -327,7 +329,6 @@ function App() {
               <p>CONTACT FORM</p>
             </BackgroundWithText>
           </section>
-
           <section className="section section-1-5">
             <div className={classFooter} ref={footer}>
               <footer>
