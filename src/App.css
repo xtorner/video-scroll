@@ -526,17 +526,11 @@ section ul {
 }
 
 .slide {
-  /* display: none;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.5s ease-in-out; 
-  
-  flex-shrink: 0;*/
   position: absolute;
   width: 20rem;
   transition: all 0.5s ease;
   opacity: 0;
-  transform: translateX(-100%);
+  transform: translateX(-50%);
 }
 
 .slide img {
