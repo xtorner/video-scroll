@@ -208,7 +208,7 @@ function App() {
             }
           >
             <video
-              playsinline
+              playsInLine
               muted
               preload="auto"
               ref={videoEl}
@@ -336,21 +336,60 @@ function App() {
             </BackgroundWithText>
           </section>
           <section
-            className={`section section-1-3 fade ${
+            className={`section section-theteam fade ${
               elements.element5 ? "visible" : "hidden"
             }`}
           >
             <BackgroundWithText>
               <h2>The Team</h2>
-              <p>PARALEL IMAGE CARROUSSEL</p>
-              <ImageCarousel
-                images={[
-                  "cursor.png",
-                  "cursor.png",
-                  "cursor.png",
-                  "cursor.png",
-                ]}
-              ></ImageCarousel>
+              <div className="carrousel-theteam">
+                <p></p>
+                <ImageCarousel
+                  images={[
+                    {
+                      src: "img/team/MireiaTorello.jpg",
+                      text: "Mireia Torello | Co-founder, CEO",
+                      desc: `Investment Director and Research Director with more than 10 years of experience. Passionate in sustainability, ethics and the impact of artificial intelligence on youth. Wide international research experience and scientific publications. She holds an EMBA from IESE Business School and a PhD in Earth Sciences from James Cook University, Australia.
+                      <br /><br />@mireia-torello-raventos
+                      @TorelloRaventos`,
+                    },
+                    {
+                      src: "img/team/MarcOliveras.jpg",
+                      text: "Marc Oliveras | Co-founder, Product & Learning Methodologies Director",
+                      desc: `AI consultant and President of the Board of Trustees of the L’Horitzó School. Director and teacher of the Artificial Intelligence project at this school. He holds a Master's in Business Intelligence & Big Data from the UOC, a degree in Business Administration and Management & MBA from ESADE, and a PhD in Economics and Business from Ramon Llull University. Passionate about education and pedagogy, his doctoral dissertation defines reflective knowledge and its influence on the modern economy.
+                      <br /><br />
+                      laguineueconomista.com
+                      @moliverasballus
+                      @moliverasballus`,
+                    },
+                    {
+                      src: "img/team/JosepCurto.jpg",
+                      text: "Josep Curto | Co-founder, Product & Analytics Director",
+                      desc: `Advisor, entrepreneur, data scientist, and professor. Founder, AthenaCore. Member of the advisory board at L’Horitzó School. Academic Director of the Master in Business Intelligence and Big Data Analytics (MIBA) at Universitat Oberta de Catalunya (UOC), associate professor at IE Business School, and casual lecturer at AGSM@UNSW where he gives lectures about responsible AI, data science, data governance, big data and data-driven strategies for future managers and developers. Josep holds a BSc (Hons) in Mathematics (UAB), an MSc (Hons) in Business Intelligence (UOC), and an MSc (Hons) in IT Management (UOC), as well as a top tier MBA (IE Business School). He is the author of numerous academic articles and books related to his professional experience.
+                      <br /><br />
+                      www.josepcurto.com
+                      @josepcurto
+                      @josepcurto`,
+                    },
+                    {
+                      src: "img/team/FrancescColome.jpg",
+                      text: "Francesc Colome | Co-founder, Curriculum Director",
+                      desc: "Member of the advisory board at L’Horitzó School. He has a degree in Chemistry and has been, among other responsibilities, inspector of education, Director General of Vocational Training of the Ministry of Education, Secretary of Educational Policies of the Department of Education of the Generalitat, and Professor of Chemistry at the UAB.",
+                    },
+                    {
+                      src: "img/team/DavidCabanillas.jpg",
+                      text: "David Cabanillas | Co-founder, Content Director",
+                      desc: "Data scientist and professor. Member of AthenaCore, and professor at Universitat Oberta de Catalunya (UOC) where he gives lectures about data science. Data passionate with more than 10 experienced years. Helping several companies to become data-driven organizations focused on identifying and creating efficient ways to collect, cleanse and maintain data, and providing decision intelligence insights (based on classification, scoring and propensity algorithms). David holds Ph.D. in Artificial Intelligence (UPC).",
+                    },
+                    {
+                      src: "img/team/XaviTorner.jpg",
+                      text: "Xavier Torner | Full Stack Engineer",
+                      desc: `Computer Science Engineer with more than 20 years of experience related to web development and system administration.<br />
+As a Site Reliability Engineer (SRE), is responsible of implementation and supervision of DevOps technologies and a cyber secure development infrastructure.`,
+                    },
+                  ]}
+                ></ImageCarousel>
+              </div>
             </BackgroundWithText>
           </section>
           <section
