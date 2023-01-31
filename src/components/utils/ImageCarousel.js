@@ -24,17 +24,13 @@ function ImageCarousel({ images }) {
       </div>
       <div className="slide-container">
         {images.map((image, index) => (
-          <>
-            <div
-              key={image.src}
-              className="slide"
-              style={{ transform: `translateX(${-100 * activeIndex}%)` }}
-            >
-              <img src={image.src} alt="" />
-
-              <div className="text">{image.text}</div>
-            </div>
-          </>
+          <div
+            key={image.src}
+            className={`slide ${index === activeIndex ? "active" : ""}`}
+          >
+            <img src={image.src} alt="" />
+            <div className="text">{image.text}</div>
+          </div>
         ))}
       </div>
       <div className="text-slide-container">
