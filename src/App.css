@@ -218,6 +218,7 @@ progress[value]::-webkit-progress-value {
 footer {
   width: 100%;
   height: 100%;
+  padding: 1.2rem;
 }
 footer ul {
   display: flex;
@@ -466,10 +467,10 @@ section ul {
   display: flex;
   width: 60%;
   margin-left: 3rem;
-  height: 30rem;
+  height: 25rem;
   justify-content: flex-start;
   background-color: #f0a5be75;
-  top: 128rem;
+  top: 110rem;
   z-index: 999;
 }
 .section-1-5 {

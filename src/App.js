@@ -80,7 +80,7 @@ function App() {
         //const scrollVelocity = videoEl.current.scrollTop / event.deltaY;
         videoEl.current.currentTime = scrollPos / 10;
         setClassFooter(
-          window.scrollY > 1775
+          window.scrollY > 1780
             ? "section-footer-free"
             : "section-footer-blocked"
         );
