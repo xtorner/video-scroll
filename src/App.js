@@ -369,7 +369,7 @@ function App() {
                       <br /><br />
                       www.josepcurto.com
                       @josepcurto
-                      @josepcurto`,
+                      @josepcurto<br /><br />`,
                     },
                     {
                       src: "img/team/FrancescColome.jpg",
