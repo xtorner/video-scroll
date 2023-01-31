@@ -1,19 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Typewriter from "./Typewriter";
 
 function ImageCarousel({ images }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [description, setDescription] = useState(images[0].desc);
 
+  useEffect(() => {
+    const newDescription = images[activeIndex].desc;
+    setDescription(newDescription);
+  }, [activeIndex, images]);
+
   const handlePrevClick = () => {
     setActiveIndex(activeIndex === 0 ? images.length - 1 : activeIndex - 1);
-    setDescription(
-      images[activeIndex === 0 ? images.length - 1 : activeIndex - 1].desc
-    );
   };
 
   const handleNextClick = () => {
     setActiveIndex((activeIndex + 1) % images.length);
-    setDescription(images[(activeIndex + 1) % images.length].desc);
   };
 
   return (
@@ -26,7 +28,7 @@ function ImageCarousel({ images }) {
         {images.map((image, index) => (
           <div
             key={image.src}
-            className={`slide ${index === activeIndex ? "active" : ""}`}
+            className={`slide ${activeIndex === index ? "active" : ""}`}
           >
             <img src={image.src} alt="" />
             <div className="text">{image.text}</div>

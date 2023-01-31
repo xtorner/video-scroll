@@ -11,6 +11,7 @@ import BackgroundWithText from "./components/utils/BackgroundWithText";
 import ImageCarousel from "./components/utils/ImageCarousel";
 // import SmokeScene from "./components/utils/smoke/Smoke";
 import ScrollIntoView from "react-scroll-into-view";
+import Typewriter from "./components/utils/Typewriter";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -178,10 +179,11 @@ function App() {
             }`}
           >
             <h1>
-              Empower your child
-              <br />
-              with a 21st-century education to <br />
-              succeed in the age of AI
+              <Typewriter
+                text="Empower your child
+              with a 21st-century education to 
+              succeed in the age of AI "
+              />
             </h1>
             <strong></strong>
             <div className="scroll-warn">
