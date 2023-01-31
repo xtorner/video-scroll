@@ -10,6 +10,7 @@ import LoaderBlock from "./components/utils/loader-block/LoaderBlock";
 import BackgroundWithText from "./components/utils/BackgroundWithText";
 import ImageCarousel from "./components/utils/ImageCarousel";
 // import SmokeScene from "./components/utils/smoke/Smoke";
+import ScrollIntoView from "react-scroll-into-view";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -38,8 +39,13 @@ function App() {
 
   const handleAnchor = (anchorId) => {
     const anchorRef = refs.get(anchorId);
-    anchorRef.current.scrollIntoView({ behavior: "smooth" });
+    anchorRef.current.scrollIntoView({
+      alignToTop: true,
+      behavior: "smooth",
+      duration: 6000,
+    });
   };
+
   const handleLoadedData = () => {
     setProgress((videoEl.current.duration / 100) * progress);
   };
@@ -115,7 +121,7 @@ function App() {
           <LoaderBlock />
         </>
       ) : (
-        <>
+        <div className="container-fluid">
           <div className="area-top">
             <progress value={progress} max="100" className="progress-bar" />
             <nav className="container navbar navbar-expand-lg">
@@ -213,7 +219,15 @@ function App() {
               onTimeUpdate={handleTimeUpdate}
             />
           </div>
-          <div ref={anchor1Ref} id="anchor1" className="anchor1"></div>
+          <ScrollIntoView
+            selector="#anchor1"
+            smooth
+            duration={80000}
+            ref={anchor1Ref}
+          >
+            <div id="anchor1" className="anchor1"></div>
+          </ScrollIntoView>
+          {/* <div ref={anchor1Ref} id="anchor1" className="anchor1"></div> */}
           <section
             className={`section section-platform fade ${
               elements.element2 ? "visible" : "hidden"
@@ -286,32 +300,39 @@ function App() {
           >
             <BackgroundWithText>
               <h2>About Us</h2>
-              {/* <p>
-                AI is present every day in our lives: from choosing songs in
-                your music app to recognizing your face on your cell phone.
-                <br />
-                And yet, children and parents do not understand how these
-                technological tools work and their possibilities and impact on
-                society, the economy, and our lives in general.
-                <br />
-                The goal of AIKreate is to provide our students, ages 12-17,
-                with a set of skills to understand what AI is and how AI models,
-                their algorithms, and the data that feed them are built.
-                <br />
-                Programming and technology skills will make a difference in the
-                future.
-                <br />
-                Most of today's jobs will be replaced by new ones.
-                <br />
-                AIKreate wants to positively influence your children's future so
-                that they have a future with better opportunities.
-                <br />
-                Your children will thank you for introducing them to
-                21st-century language learning at an early age. We believe that
-                teenagers need a platform where they feel safe, free from
-                advertising and distractions, with easy-to-follow and fun
-                content.
-              </p> */}
+              <div>
+                <p>
+                  AI is present every day in our lives: from choosing songs in
+                  your music app to recognizing your face on your cell phone.
+                </p>
+                <p>
+                  And yet, children and parents do not understand how these
+                  technological tools work and their possibilities and impact on
+                  society, the economy, and our lives in general.
+                </p>
+                <p>
+                  The goal of AIKreate is to provide our students, ages 12-17,
+                  with a set of skills to understand what AI is and how AI
+                  models, their algorithms, and the data that feed them are
+                  built.
+                </p>
+                <p>
+                  Programming and technology skills will make a difference in
+                  the future.
+                </p>
+                <p>Most of today's jobs will be replaced by new ones.</p>
+                <p>
+                  AIKreate wants to positively influence your children's future
+                  so that they have a future with better opportunities.
+                </p>
+                <p>
+                  Your children will thank you for introducing them to
+                  21st-century language learning at an early age. We believe
+                  that teenagers need a platform where they feel safe, free from
+                  advertising and distractions, with easy-to-follow and fun
+                  content.
+                </p>
+              </div>
             </BackgroundWithText>
           </section>
           <section
@@ -394,7 +415,7 @@ function App() {
               </footer>
             </div>
           </section>
-        </>
+        </div>
       )}
     </>
   );
