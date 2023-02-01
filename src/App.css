@@ -382,6 +382,12 @@ body::-webkit-scrollbar-thumb {
 .section-platform-color {
   background-color: #85d4ac95;
 }
+.section-plans-color {
+  background-color: #f2c67f95;
+}
+.section-about-color {
+  background-color: #f6e2a675;
+}
 /* ENS SECTION PLATFORM */
 
 /* SECTION PLANS */
@@ -391,7 +397,6 @@ body::-webkit-scrollbar-thumb {
   height: 25rem;
   margin-right: 2rem;
   left: 50%;
-  background-color: #f2c67f95;
   flex-direction: column;
   top: 55rem;
   align-items: center;
@@ -448,7 +453,7 @@ body::-webkit-scrollbar-thumb {
   height: 37rem;
   justify-content: center;
   left: 200px;
-  background-color: #f6e2a675;
+
   justify-content: flex-start;
   top: 70rem;
 }
@@ -696,7 +701,7 @@ section ul {
 
 /* ·3D */
 .container3d {
-  height: 40rem;
+  height: 100%;
   position: relative;
   width: 100%;
   display: flex;

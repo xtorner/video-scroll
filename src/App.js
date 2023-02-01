@@ -271,12 +271,13 @@ function App() {
           </section>
 
           <div ref={anchor2Ref} id="anchor2" className="anchor2"></div>
-          <PerspectiveBox data="section">
-            <section
-              className={`section section-plans fade ${
-                elements.element3 ? "visible" : "hidden"
-              }`}
-            >
+
+          <section
+            className={`section section-plans fade ${
+              elements.element3 ? "visible" : "hidden"
+            }`}
+          >
+            <PerspectiveBox data="section-plans-color sectionx">
               <BackgroundWithText>
                 <h2>Plans</h2>
                 <div className="plans-wrapper">
@@ -290,7 +291,7 @@ function App() {
                       of a worldwide community of entrepreneurs (B2C)
                     </p>
                   </div>
-                  <div className="carroussel">
+                  {/* <div className="carroussel">
                     <ul>
                       <li>1</li>
                       <li>2</li>
@@ -298,53 +299,56 @@ function App() {
                       <li>4</li>
                       <li>5</li>
                     </ul>
-                  </div>
+                  </div> */}
                 </div>
               </BackgroundWithText>
-            </section>
-          </PerspectiveBox>
+            </PerspectiveBox>
+          </section>
+
           <div ref={anchor3Ref} id="anchor3" className="anchor3"></div>
           <section
             className={`section section-about-us fade ${
               elements.element4 ? "visible" : "hidden"
             }`}
           >
-            <BackgroundWithText>
-              <h2>About Us</h2>
-              <div>
-                <p>
-                  AI is present every day in our lives: from choosing songs in
-                  your music app to recognizing your face on your cell phone.
-                </p>
-                <p>
-                  And yet, children and parents do not understand how these
-                  technological tools work and their possibilities and impact on
-                  society, the economy, and our lives in general.
-                </p>
-                <p>
-                  The goal of AIKreate is to provide our students, ages 12-17,
-                  with a set of skills to understand what AI is and how AI
-                  models, their algorithms, and the data that feed them are
-                  built.
-                </p>
-                <p>
-                  Programming and technology skills will make a difference in
-                  the future.
-                </p>
-                <p>Most of today's jobs will be replaced by new ones.</p>
-                <p>
-                  AIKreate wants to positively influence your children's future
-                  so that they have a future with better opportunities.
-                </p>
-                <p>
-                  Your children will thank you for introducing them to
-                  21st-century language learning at an early age. We believe
-                  that teenagers need a platform where they feel safe, free from
-                  advertising and distractions, with easy-to-follow and fun
-                  content.
-                </p>
-              </div>
-            </BackgroundWithText>
+            <PerspectiveBox data="section-about-color sectionx">
+              <BackgroundWithText>
+                <h2>About Us</h2>
+                <div>
+                  <p>
+                    AI is present every day in our lives: from choosing songs in
+                    your music app to recognizing your face on your cell phone.
+                  </p>
+                  <p>
+                    And yet, children and parents do not understand how these
+                    technological tools work and their possibilities and impact
+                    on society, the economy, and our lives in general.
+                  </p>
+                  <p>
+                    The goal of AIKreate is to provide our students, ages 12-17,
+                    with a set of skills to understand what AI is and how AI
+                    models, their algorithms, and the data that feed them are
+                    built.
+                  </p>
+                  <p>
+                    Programming and technology skills will make a difference in
+                    the future.
+                  </p>
+                  <p>Most of today's jobs will be replaced by new ones.</p>
+                  <p>
+                    AIKreate wants to positively influence your children's
+                    future so that they have a future with better opportunities.
+                  </p>
+                  <p>
+                    Your children will thank you for introducing them to
+                    21st-century language learning at an early age. We believe
+                    that teenagers need a platform where they feel safe, free
+                    from advertising and distractions, with easy-to-follow and
+                    fun content.
+                  </p>
+                </div>
+              </BackgroundWithText>
+            </PerspectiveBox>
           </section>
 
           <section
