@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import * as noise from "noisejs";
 
 const BackgroundWithText = ({ children }) => {
-  const [fill, setFill] = useState("#F2F1F2");
+  const [fill, setFill] = useState(getRandomColor);
   const [cloudPoints, setCloudPoints] = useState([]);
   useEffect(() => {
     setFill(getRandomColor());
@@ -12,8 +12,9 @@ const BackgroundWithText = ({ children }) => {
   const createCloudShape = () => {
     const n = new noise.Noise(Math.random());
     let points = "";
-    for (let a = 0; a < 8 * Math.PI; a += 0.0015) {
-      const x = 300 / 5 + 140 * n.perlin2(a, a) * Math.cos(a * a * Math.PI);
+    for (let a = 0; a < 8 * Math.PI; a += 0.005) {
+      const x =
+        300 / 5 + 140 * n.perlin2(a, a) * Math.cos((a * a) ^ (2 * Math.PI));
       const y = 60 / 0.98 + 60 * n.perlin2(a, a) * Math.sin(a * Math.sin(a));
       points += `${x},${y} `;
     }

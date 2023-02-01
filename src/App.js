@@ -12,6 +12,7 @@ import ImageCarousel from "./components/utils/ImageCarousel";
 // import SmokeScene from "./components/utils/smoke/Smoke";
 import ScrollIntoView from "react-scroll-into-view";
 import Typewriter from "./components/utils/Typewriter";
+import TextHoverEffect from "./components/utils/TextHoverEffect";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -148,7 +149,7 @@ function App() {
                       href="#anchor1"
                       onClick={() => handleAnchor("anchor1")}
                     >
-                      The Platform
+                      <TextHoverEffect text="The Platform" />
                     </NavLink>
                   </li>
                   <li className="nav-item">
@@ -157,7 +158,7 @@ function App() {
                       href="#anchor2"
                       onClick={() => handleAnchor("anchor2")}
                     >
-                      Plans
+                      <TextHoverEffect text="Plans" />
                     </NavLink>
                   </li>
                   <li className="nav-item">
@@ -166,7 +167,7 @@ function App() {
                       href="#anchor3"
                       onClick={() => handleAnchor("anchor3")}
                     >
-                      Company
+                      <TextHoverEffect text="Company" />
                     </NavLink>
                   </li>
                 </ul>
@@ -181,7 +182,8 @@ function App() {
             <h1>
               <Typewriter
                 text="Empower your child
-              with a 21st-century education to 
+              with a 21st-century education
+              to 
               succeed in the age of AI "
               />
             </h1>
@@ -351,17 +353,17 @@ function App() {
                     {
                       src: "img/team/MireiaTorello.jpg",
                       text: "Mireia Torello | Co-founder, CEO",
-                      desc: `Investment Director and Research Director with more than 10 years of experience. Passionate in sustainability, ethics and the impact of artificial intelligence on youth. Wide international research experience and scientific publications. She holds an EMBA from IESE Business School and a PhD in Earth Sciences from James Cook University, Australia.
+                      desc: `<strong>Investment Director and Research Directorwith more than 10 years of experience.</strong> <br /><br />Passionate in sustainability, ethics and the impact of artificial intelligence on youth.<br />Wide international research experience and scientific publications.<br />She holds an EMBA from IESE Business School and a PhD in Earth Sciences from James Cook University, Australia.
                       <br /><br />@mireia-torello-raventos
-                      @TorelloRaventos`,
+                      <a href="https://twitter.com/mireia.torello">@TorelloRaventos</a>`,
                     },
                     {
                       src: "img/team/MarcOliveras.jpg",
                       text: "Marc Oliveras | Co-founder, Product & Learning Methodologies Director",
-                      desc: `AI consultant and President of the Board of Trustees of the L’Horitzó School. Director and teacher of the Artificial Intelligence project at this school. He holds a Master's in Business Intelligence & Big Data from the UOC, a degree in Business Administration and Management & MBA from ESADE, and a PhD in Economics and Business from Ramon Llull University. Passionate about education and pedagogy, his doctoral dissertation defines reflective knowledge and its influence on the modern economy.
+                      desc: `<strong>AI consultant and President of the Board of Trustees of the L’Horitzó School.<br />Director and teacher of the Artificial Intelligence project at this school.</strong><br /><br />He holds a Master's in Business Intelligence & Big Data from the UOC, a degree in Business Administration and Management & MBA from ESADE, and a PhD in Economics and Business from Ramon Llull University.<br />Passionate about education and pedagogy, his doctoral dissertation defines reflective knowledge and its influence on the modern economy.
                       <br /><br />
-                      laguineueconomista.com
-                      @moliverasballus
+                      <a href="https://www.laguineueconomista.com">laguineueconomista.com</a>
+                      @moliverasballus<br />
                       @moliverasballus`,
                     },
                     {
