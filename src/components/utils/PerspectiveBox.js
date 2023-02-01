@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 
-const Constrain = 450;
+const Constrain = 500;
 
-const Example = ({ children }, { props }) => {
+const PerspectiveBox = ({ children, ...props }) => {
+  console.log(props.data);
   const [isMouseOver, setIsMouseOver] = useState(false);
   const [xy, setXY] = useState([0, 0]);
   const ex1LayerRef = useRef(null);
@@ -40,15 +41,15 @@ const Example = ({ children }, { props }) => {
   return (
     <div
       id="ex1"
-      className={`${props} container3d`}
+      className={`container3d`}
       onMouseEnter={() => setIsMouseOver(true)}
       onMouseLeave={() => setIsMouseOver(false)}
     >
-      <div id="ex1-layer" className="box3d" ref={ex1LayerRef}>
+      <div id="ex1-layer" className={`${props.data} box3d`} ref={ex1LayerRef}>
         {children}
       </div>
     </div>
   );
 };
 
-export default Example;
+export default PerspectiveBox;

@@ -324,6 +324,7 @@ body::-webkit-scrollbar-thumb {
   flex-direction: row;
   flex-wrap: nowrap;
   position: absolute;
+  z-index: 999;
   align-items: flex-start;
 }
 .eseuve {
@@ -354,7 +355,16 @@ body::-webkit-scrollbar-thumb {
   border-radius: 1.8rem;
   align-items: flex-start;
   justify-content: flex-start;
-  overflow: hidden;
+  /* overflow: hidden;  border-radius: 1.8rem;*/
+}
+.sectionx {
+  z-index: 5;
+  position: inherit;
+  display: flex;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+  height: 100%;
+  width: 100%;
 }
 /* SECTION PLATFORM */
 .section-platform {
@@ -364,12 +374,13 @@ body::-webkit-scrollbar-thumb {
   top: 30rem;
   height: 30rem;
   margin-left: 3rem;
-  background-color: #85d4ac95;
-
   display: flex;
   width: 60%;
   align-items: flex-start;
   justify-content: flex-start;
+}
+.section-platform-color {
+  background-color: #85d4ac95;
 }
 /* ENS SECTION PLATFORM */
 
@@ -694,5 +705,6 @@ section ul {
   position: relative;
   height: 100%;
   width: 100%;
-  border: 1px solid red;
+  overflow: hidden;
+  border-radius: 0.5rem;
 }
