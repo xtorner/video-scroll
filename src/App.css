@@ -670,3 +670,11 @@ section ul {
 .text-effect.hovered {
   color: #272727;
 }
+
+.icon-team {
+  width: 1rem;
+  color: #406eb5;
+}
+.link-icon-team {
+  text-decoration: none;
+}
