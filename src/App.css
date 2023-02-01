@@ -542,8 +542,9 @@ section ul {
   transition: all 0.5s ease;
   opacity: 0;
   object-fit: scale-down;
-  transform: translateY(-10%);
+  /* transform: translateY(-10%); */
   border-radius: 0.3rem;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 }
 
 .slide img {
@@ -554,7 +555,7 @@ section ul {
 
 .slide.active {
   opacity: 1;
-  transform: translateY(0);
+  transform: scale(1);
 }
 
 .text-slide-container {
