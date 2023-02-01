@@ -38,6 +38,8 @@
   width: 100%;
   position: fixed;
   z-index: 9999 !important;
+  background-color: #f2f1f2 !important;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 /* Menu Top Wrapper */
 .navbar-nav {
@@ -388,6 +390,12 @@ body::-webkit-scrollbar-thumb {
 .section-about-color {
   background-color: #f6e2a675;
 }
+.section-theteam-color {
+  background-color: #f2bfbe50;
+}
+.section-contact-color {
+  background-color: #f0a5be75;
+}
 /* ENS SECTION PLATFORM */
 
 /* SECTION PLANS */
@@ -466,7 +474,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: flex-start;
   align-items: flex-start;
   left: 50px;
-  background-color: #f2bfbe50;
+
   top: 91rem;
 }
 section p,
@@ -478,14 +486,15 @@ section ul {
   padding-right: 5%;
   list-style: none;
 }
-.section-1-4 {
+
+.section-contact {
   position: relative;
   display: flex;
   width: 60%;
   margin-left: 3rem;
   height: 25rem;
   justify-content: flex-start;
-  background-color: #f0a5be75;
+
   top: 110rem;
   z-index: 999;
 }
