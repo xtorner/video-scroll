@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 
 import video from "./assets/vid.mp4";
-import { NavLink } from "react-bootstrap";
+import { Button, NavLink } from "react-bootstrap";
 import useWindowResize from "./components/hooks/windowresize";
 import LoaderBlock from "./components/utils/loader-block/LoaderBlock";
 import BackgroundWithText from "./components/utils/BackgroundWithText";
@@ -64,7 +64,6 @@ function App() {
   useEffect(() => {
     // 1 scroll down | 2 theplatform | 3 plans | 4
     const handleScroll = (event) => {
-      console.log("scrollpos:", window.scrollY);
       let sY = window.scrollY;
       setElements({
         ...elements,
@@ -420,7 +419,37 @@ As a <strong>Site Reliability Engineer (SRE)</strong>, is responsible of impleme
               <BackgroundWithText>
                 <h2>Contact Us</h2>
 
-                <p>CONTACT FORM</p>
+                <div className="form-wrapper">
+                  <div className="row">
+                    <div className="col-md-6">
+                      <ul>
+                        <li>
+                          <input
+                            type="text"
+                            name="your-name"
+                            placeholder="Your Name:"
+                          />
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div className="col-md-6">
+                      <input type="text" placeholder="Your Email:" />
+                    </div>
+
+                    <div className="col-md-12">
+                      <textarea type="text" placeholder="Your Message:" />
+                    </div>
+
+                    <div className="col-md-12 button-contact">
+                      <Button type="submit">SEND</Button>
+                    </div>
+                  </div>
+                  {/* <div className='row  button-flip-wrapper'>
+                                  <input className="checkbox1" type="checkbox" id="reg-log1" name="reg-log1" />
+                                  <label htmlFor="reg-log1" onClick={ switchModeHandler } />
+                                </div> */}
+                </div>
               </BackgroundWithText>
             </PerspectiveBox>
           </section>
