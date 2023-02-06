@@ -406,7 +406,7 @@ body::-webkit-scrollbar-thumb {
   width: 49%;
   height: 21rem;
   margin-right: 2rem;
-  left: 40%;
+  left: 45%;
   flex-direction: column;
   top: 55rem;
   align-items: center;
