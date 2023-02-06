@@ -377,9 +377,9 @@ body::-webkit-scrollbar-thumb {
   /* visibility: hidden; */
   top: 30rem;
   height: 25rem;
-  margin-left: 3rem;
+  left: 10rem;
   display: flex;
-  width: 60%;
+  width: 50%;
   align-items: flex-start;
   justify-content: flex-start;
 }
@@ -466,7 +466,7 @@ body::-webkit-scrollbar-thumb {
 .section-about-us {
   position: absolute;
   display: flex;
-  width: 69%;
+  width: 50%;
   height: 23rem;
   justify-content: center;
   left: 100px;
