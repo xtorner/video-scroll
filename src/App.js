@@ -34,11 +34,15 @@ function App() {
   const anchor1Ref = useRef(null);
   const anchor2Ref = useRef(null);
   const anchor3Ref = useRef(null);
+  const anchor4Ref = useRef(null);
+  const anchor5Ref = useRef(null);
 
   const refs = new Map([
     ["anchor1", anchor1Ref],
     ["anchor2", anchor2Ref],
     ["anchor3", anchor3Ref],
+    ["anchor4", anchor4Ref],
+    ["anchor5", anchor5Ref],
   ]);
 
   const handleAnchor = (anchorId) => {
@@ -241,7 +245,7 @@ function App() {
             <PerspectiveBox data="section-platform-color sectionx">
               <BackgroundWithText>
                 <h2>The Platform</h2>
-                <div>
+                <div className="platform-wrapper">
                   <h3>What we offer</h3>
                   <ul>
                     <li>Mastery of AI technology</li>
@@ -295,7 +299,16 @@ function App() {
                           Become a user of our educational platform and become
                           part of a worldwide community of entrepreneurs. Join
                           our mailing list and we will contact you when it is
-                          ready - Subscribe to our newsletter
+                          ready -{" "}
+                          <Button
+                            href="#"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              alert("soon");
+                            }}
+                          >
+                            Subscribe to our newsletter
+                          </Button>
                         </p>
                       </li>
                     </ul>
@@ -341,7 +354,7 @@ function App() {
               </BackgroundWithText>
             </PerspectiveBox>
           </section>
-
+          <div ref={anchor4Ref} id="anchor4" className="anchor4"></div>
           <section
             className={`section section-theteam fade ${
               elements.element5 ? "visible" : "hidden"
@@ -401,7 +414,7 @@ As a <strong>Site Reliability Engineer (SRE)</strong>, is responsible of impleme
               </BackgroundWithText>
             </PerspectiveBox>
           </section>
-
+          <div ref={anchor5Ref} id="anchor5" className="anchor5"></div>
           <section
             className={`section section-contact fade ${
               elements.element6 ? "visible" : "hidden"
@@ -471,22 +484,47 @@ As a <strong>Site Reliability Engineer (SRE)</strong>, is responsible of impleme
                     <li>
                       <h3>PLANS</h3>
                       <p>
-                        <a href="#plans">Educational institutions</a>
+                        <a
+                          href="#plans"
+                          onClick={() => handleAnchor("anchor2")}
+                        >
+                          Educational institutions
+                        </a>
                       </p>
                       <p>
-                        <a href="#plans">College students</a>
+                        <a
+                          href="#plans"
+                          onClick={() => handleAnchor("anchor2")}
+                        >
+                          College students
+                        </a>
                       </p>
                     </li>
                     <li>
                       <h3>COMPANY</h3>
                       <p>
-                        <a href="#about-us">About Us</a>
+                        <a
+                          href="#anchor3"
+                          onClick={() => handleAnchor("anchor3")}
+                        >
+                          About Us
+                        </a>
                       </p>
                       <p>
-                        <a href="#the-team">The Team</a>
+                        <a
+                          href="#anchor4"
+                          onClick={() => handleAnchor("anchor4")}
+                        >
+                          The Team
+                        </a>
                       </p>
                       <p>
-                        <a href="#contact-us">Contact Us</a>
+                        <a
+                          href="#anchor5"
+                          onClick={() => handleAnchor("anchor5")}
+                        >
+                          Contact Us
+                        </a>
                       </p>
                     </li>
                     {/* <li>

@@ -18,7 +18,7 @@
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 0 !important;
   font-family: "riffic-book", sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
