@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 export const Boxes = styled.div`
+  z-index: 8888;
   width: 100%;
   height: 100%;
+  background-color: transparent;
   position: fixed;
   display: flex;
   flex-direction: column;

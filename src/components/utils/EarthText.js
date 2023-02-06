@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
+import LoaderBlock from "./loader-block/LoaderBlock";
 
 const EarthText = () => {
   const [circles, setCircles] = useState([]);
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
   useEffect(() => {
     let elements = [];
-    for (let i = 0; i < 500; i++) {
+    for (let i = 0; i < 800; i++) {
       elements.push({
         x: Math.floor(Math.random() * window.innerWidth),
         y: Math.floor(Math.random() * window.innerHeight),
@@ -33,7 +34,7 @@ const EarthText = () => {
         let totalForceY = 0;
 
         if (distance < 100) {
-          const force = (100 - distance) / 100;
+          const force = (10 - distance * 5) / 10;
           const direction = {
             x: dx / distance,
             y: dy / distance,
@@ -49,7 +50,7 @@ const EarthText = () => {
             const distance = Math.sqrt(dx * dx + dy * dy);
 
             if (distance < 50) {
-              const force = (50 - distance) / 50;
+              const force = (50 - distance) / 2;
               const direction = {
                 x: dx / distance,
                 y: dy / distance,
@@ -73,18 +74,21 @@ const EarthText = () => {
   });
 
   return (
-    <div className="ballcontainer">
-      {circles.map((circle, index) => (
-        <div
-          key={index}
-          className="circle"
-          style={{
-            left: `${circle.x}px`,
-            top: `${circle.y}px`,
-          }}
-        />
-      ))}
-    </div>
+    <>
+      <div className="ballcontainer">
+        {circles.map((circle, index) => (
+          <div
+            key={index}
+            className="circle"
+            style={{
+              left: `${circle.x}px`,
+              top: `${circle.y}px`,
+            }}
+          />
+        ))}
+      </div>
+      {/* <LoaderBlock /> */}
+    </>
   );
 };
 

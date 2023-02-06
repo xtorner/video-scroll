@@ -33,7 +33,7 @@ const BackgroundWithText = ({ children }) => {
 
 const getRandomColor = () => {
   const color1 = "#f1f2f1";
-  const color2 = "#f2f1f2";
+  const color2 = "#aaaaaa";
 
   function blendColors(color1, color2, ratio = 0.5) {
     const color1Array = color1.match(/\w{2}/g).map((x) => parseInt(x, 16));
