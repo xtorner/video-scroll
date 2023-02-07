@@ -629,7 +629,7 @@ section ul {
 }
 
 .slide img {
-  width: 45%;
+  width: 100%;
   height: 45%;
   object-fit: cover;
 }
