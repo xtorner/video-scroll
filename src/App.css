@@ -79,7 +79,7 @@
   margin-top: 5rem;
   margin-left: 5rem;
   width: 50%;
-  height: 50rem;
+  height: auto;
   background-color: #f1f2f125;
 }
 
@@ -350,18 +350,7 @@ body::-webkit-scrollbar-thumb {
 
 /* SECTIONS */
 /* SHARED */
-.section {
-  z-index: 5;
-  position: relative;
-  height: auto;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  border-radius: 1.8rem;
-  align-items: flex-start;
-  justify-content: flex-start;
-  /* overflow: hidden;  border-radius: 1.8rem;*/
-}
+
 .sectionx {
   z-index: 5;
   position: inherit;
@@ -371,21 +360,49 @@ body::-webkit-scrollbar-thumb {
   height: 100%;
   width: 100%;
 }
+.section {
+  z-index: 5;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.8rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  /* overflow: hidden;  border-radius: 1.8rem;*/
+}
 /* SECTION PLATFORM */
-.section-platform {
+.section.section-platform {
   position: absolute;
   z-index: 10;
   /* visibility: hidden; */
   top: 30rem;
-  height: 25rem;
+
   left: 10rem;
-  display: flex;
+  /* display: flex;
+  flex-direction: column; */
   width: 60%;
+  height: 20vh;
   align-items: flex-start;
   justify-content: flex-start;
+  font-size: 1vw;
 }
-.section-platform .platform-wrapper {
-  height: 40rem;
+.platform-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 30rem;
+}
+@media only screen and (min-width: 600px) {
+  .section.section-platform {
+    min-height: 60%;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .section.section-platform {
+    min-height: 50%;
+  }
 }
 .section-platform-color {
   background-color: #85d4ac95;
@@ -405,7 +422,7 @@ body::-webkit-scrollbar-thumb {
 /* ENS SECTION PLATFORM */
 
 /* SECTION PLANS */
-.section-plans {
+.section.section-plans {
   display: flex;
   width: 49%;
   height: 21rem;
@@ -415,6 +432,7 @@ body::-webkit-scrollbar-thumb {
   top: 55rem;
   align-items: center;
   justify-content: flex-start;
+  font-size: 1vw;
 }
 .section-plans .paragraf {
   height: 100%;
@@ -477,6 +495,7 @@ body::-webkit-scrollbar-thumb {
 
   justify-content: flex-start;
   top: 70rem;
+  font-size: 1vw;
 }
 
 .section-theteam {
@@ -503,13 +522,14 @@ section ul {
 .section-contact {
   position: relative;
   display: flex;
-  width: 60%;
+  width: 50%;
   margin-left: 3rem;
   height: 25rem;
   justify-content: flex-start;
 
-  top: 110rem;
+  top: 95rem;
   z-index: 999;
+  font-size: 1vw;
 }
 .section-contact ul {
   list-style: none;
@@ -648,19 +668,20 @@ section ul {
   filter: drop-shadow(0 0 0.1rem rgba(19, 19, 19, 75));
 }
 
-@media (max-width: 767px) {
+@media only screen and (min-width: 600px) {
   .static-info-1 {
-    border: 1px solid red;
     position: fixed;
     text-transform: uppercase;
     z-index: 2;
+    top: 20vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: auto;
-    height: 50rem;
+    width: 50%;
+    height: auto;
     background-color: #f1f2f125;
+    font-size: 1vw;
   }
   .static-info-1 h1 {
     width: 100%;
@@ -682,7 +703,6 @@ section ul {
     display: flex;
     justify-content: center;
     font-family: "riffic-light", sans-serif !important;
-    font-size: 2.8rem;
   }
   .static-info-1 strong {
     position: relative;
@@ -690,9 +710,9 @@ section ul {
     display: flex;
     justify-content: center;
     font-family: "riffic-light", sans-serif !important;
-    font-size: 3.2rem;
+
     padding-bottom: 3rem;
-    border-bottom: 1px dotted #191919;
+    border-bottom: 0.1rem solid #191919;
   }
 }
 .text-effect h2 {
