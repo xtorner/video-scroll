@@ -865,10 +865,10 @@ section ul {
     font-size: 2vw;
   }
   .section-platform {
-    min-height: 45%;
-    width: 70% !important;
-    left: 2.5rem !important;
-    font-size: 1.2vw !important;
+    min-height: 49%;
+    width: 50% !important;
+    left: 10rem !important;
+    font-size: 1.1vw !important;
   }
   .section-plans {
     min-height: 45% !important;

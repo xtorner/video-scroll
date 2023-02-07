@@ -243,7 +243,10 @@ function App() {
               elements.element2 ? "visible" : "hidden"
             }`}
           >
-            <PerspectiveBox data="section-platform-color sectionx">
+            <PerspectiveBox
+              initialPosition={[-0.5, 1.4]}
+              data="section-platform-color sectionx"
+            >
               <BackgroundWithText>
                 <h2>The Platform</h2>
                 <div className="platform-wrapper">
@@ -281,7 +284,10 @@ function App() {
               elements.element3 ? "visible" : "hidden"
             }`}
           >
-            <PerspectiveBox data="section-plans-color sectionx">
+            <PerspectiveBox
+              initialPosition={[2, -2.2]}
+              data="section-plans-color sectionx"
+            >
               <BackgroundWithText>
                 <h2>Plans</h2>
                 <div className="plans-wrapper">
@@ -325,7 +331,10 @@ function App() {
               elements.element4 ? "visible" : "hidden"
             }`}
           >
-            <PerspectiveBox data="section-about-color sectionx">
+            <PerspectiveBox
+              initialPosition={[1.1, 1]}
+              data="section-about-color sectionx"
+            >
               <BackgroundWithText>
                 <h2>About Us</h2>
                 <div>
@@ -361,7 +370,10 @@ function App() {
               elements.element5 ? "visible" : "hidden"
             }`}
           >
-            <PerspectiveBox data="section-theteam-color sectionx">
+            <PerspectiveBox
+              initialPosition={[1.5, 1]}
+              data="section-theteam-color sectionx"
+            >
               <BackgroundWithText>
                 <h2>The Team</h2>
                 <div className="carrousel-theteam">
@@ -421,7 +433,10 @@ As a <strong>Site Reliability Engineer (SRE)</strong>, is responsible of impleme
               elements.element6 ? "visible" : "hidden"
             }`}
           >
-            <PerspectiveBox data="section-contact-color sectionx">
+            <PerspectiveBox
+              initialPosition={[1.5, 1.5]}
+              data="section-contact-color sectionx"
+            >
               <BackgroundWithText>
                 <h2>Contact Us</h2>
 
