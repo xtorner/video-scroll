@@ -292,7 +292,7 @@ footer p a {
 body::-webkit-scrollbar {
   --scrollbar-foreground: #406eb550;
   --scrollbar-background: #406eb5;
-  width: 0.8rem;
+  width: 0.4rem;
   /* Foreground, Background */
   scrollbar-color: var(--scrollbar-foreground) var(--scrollbar-background);
 }
