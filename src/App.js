@@ -189,13 +189,14 @@ function App() {
               with a 21st-century education
               to 
               succeed in the age of AI "
-              />
+              ></Typewriter>
             </h1>
-            <strong></strong>
-            <div className="scroll-warn">
-              <a href="#anchor1" onClick={() => handleAnchor("anchor1")}>
-                Scroll down
-              </a>
+
+            <div
+              className="scroll-warn"
+              onClick={() => handleAnchor("anchor1")}
+            >
+              <a href="#anchor1">Scroll down</a>
 
               <div className="arrow">
                 <svg
