@@ -598,10 +598,12 @@ section ul {
 }
 .slide-container {
   display: flex;
+  position: relative;
   overflow: hidden;
-  width: 22rem;
+  width: 10rem;
+  margin-top: 3rem;
   height: 100%;
-  margin: 0;
+
   padding: 0;
 }
 
@@ -643,8 +645,8 @@ section ul {
   overflow: hidden;
   overflow-y: scroll;
   padding-top: 0.2rem;
-  margin-left: 1rem;
-  border-bottom: 1px dotted #393939;
+  margin-left: 0rem;
+
   transition: height 0.3s ease-out;
 }
 
@@ -659,20 +661,19 @@ section ul {
   border-bottom: 1px dotted #393939;
   transition: height 0.3s ease-out;
 }
-.text {
+.slide .text {
   background: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 1rem;
+  height: auto;
+  left: 1rem;
   position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
 }
 .description {
   background: rgba(255, 255, 255, 0.5);
   color: rgb(62, 62, 62);
   padding: 1rem;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
