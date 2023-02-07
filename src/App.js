@@ -285,7 +285,7 @@ function App() {
             }`}
           >
             <PerspectiveBox
-              initialPosition={[2, -2.2]}
+              initialPosition={[1, -1]}
               data="section-plans-color sectionx"
             >
               <BackgroundWithText>
