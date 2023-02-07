@@ -288,14 +288,14 @@ function App() {
                   <div className="paragraf">
                     <ul>
                       <li>
-                        <strong>Are you an educational institution?</strong>
+                        <h3>Are you an educational institution?</h3>
                         <p>
                           Contact us for tailor-made learning journeys according
                           to the needs of your institution
                         </p>
                       </li>
                       <li className="mt-4">
-                        <strong>Are you a college student?</strong>
+                        <h3>Are you a college student?</h3>
                         <p>
                           Become a user of our educational platform and become
                           part of a worldwide community of entrepreneurs. Join
