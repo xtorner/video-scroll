@@ -118,7 +118,7 @@ function App() {
     setTimeout(() => {
       setIsLoading(false);
       //videoEl.current.currentTime = 1;
-    }, 3000);
+    }, 1500);
   }, []);
   return (
     <>
@@ -132,7 +132,7 @@ function App() {
             <progress value={progress} max="100" className="progress-bar" />
             <nav className="container navbar navbar-expand-lg">
               <NavLink className="navbar-brand" href="#">
-                <img src="/img/logo.png" width="50" />
+                <img src="/img/logo.png" width="50" alt="" />
               </NavLink>
               <button
                 className="navbar-toggler"
@@ -285,7 +285,7 @@ function App() {
             }`}
           >
             <PerspectiveBox
-              initialPosition={[1, -1]}
+              initialPosition={[-0.48, -0.28]}
               data="section-plans-color sectionx"
             >
               <BackgroundWithText>
@@ -332,7 +332,7 @@ function App() {
             }`}
           >
             <PerspectiveBox
-              initialPosition={[1.1, 1]}
+              initialPosition={[-1.1, 1]}
               data="section-about-color sectionx"
             >
               <BackgroundWithText>
@@ -371,7 +371,7 @@ function App() {
             }`}
           >
             <PerspectiveBox
-              initialPosition={[1.5, 1]}
+              initialPosition={[1.3, 1.2]}
               data="section-theteam-color sectionx"
             >
               <BackgroundWithText>
@@ -434,7 +434,7 @@ As a <strong>Site Reliability Engineer (SRE)</strong>, is responsible of impleme
             }`}
           >
             <PerspectiveBox
-              initialPosition={[1.5, 1.5]}
+              initialPosition={[-0.36, 0.58]}
               data="section-contact-color sectionx"
             >
               <BackgroundWithText>
