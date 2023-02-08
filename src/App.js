@@ -76,7 +76,7 @@ function App() {
         element2: sY > 150 && sY < 580 ? !elements.element2 : elements.element2,
         element3: sY > 660 && sY < 860 ? !elements.element3 : elements.element3,
         element4:
-          sY > 860 && sY < 1180 ? !elements.element4 : elements.element4,
+          sY > 860 && sY < 1130 ? !elements.element4 : elements.element4,
         element5:
           sY > 1150 && sY < 1400 ? !elements.element5 : elements.element5,
         element6: sY > 1410 ? !elements.element6 : elements.element6,

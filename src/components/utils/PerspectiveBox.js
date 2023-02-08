@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 
 const Constrain = 500;
 
-const PerspectiveBox = ({ children, initialPosition, ...props }) => {
+const PerspectiveBox = ({ children, initialPosition, data, ...props }) => {
   const [isMouseOver, setIsMouseOver] = useState(false);
   const [xy, setXY] = useState(initialPosition);
   const ex1LayerRef = useRef(null);
@@ -11,7 +11,6 @@ const PerspectiveBox = ({ children, initialPosition, ...props }) => {
     let box = el.getBoundingClientRect();
     let calcX = -(y - box.y - box.height / 2) / Constrain;
     let calcY = (x - box.x - box.width / 2) / Constrain;
-    console.log(calcX, calcY);
     return `perspective(100px) rotateX(${calcX}deg) rotateY(${calcY}deg)`;
   };
 
@@ -34,7 +33,6 @@ const PerspectiveBox = ({ children, initialPosition, ...props }) => {
 
   useEffect(() => {
     if (isMouseOver) {
-      console.log(...xy);
       ex1LayerRef.current.style.transform = transforms(
         ...xy,
         ex1LayerRef.current
@@ -53,7 +51,7 @@ const PerspectiveBox = ({ children, initialPosition, ...props }) => {
         ex1LayerRef.current.style.transform = `perspective(100px) rotateX(${initialPosition[0]}deg) rotateY(${initialPosition[1]}deg)`;
       }}
     >
-      <div id="ex1-layer" className={`${props.data} box3d`} ref={ex1LayerRef}>
+      <div id="ex1-layer" className={`${data} box3d`} ref={ex1LayerRef}>
         {children}
       </div>
     </div>
