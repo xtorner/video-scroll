@@ -323,7 +323,31 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   border: 1px solid red;
 }
+.anchor4 {
+  top: 80rem;
+  position: absolute;
+  border: 1px solid red;
+}
+.anchor5 {
+  top: 100rem;
+  position: absolute;
+  border: 1px solid red;
+}
+.button {
+  display: flex;
+  cursor: pointer;
 
+  justify-content: center;
+  color: rgb(107, 107, 209);
+  width: 18rem !important;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  background-color: rgb(89, 89, 232);
+  color: white;
+}
+.button:hover {
+  color: #bbb8b8;
+}
 .child {
   display: flex;
   left: 0;
@@ -447,6 +471,9 @@ body::-webkit-scrollbar-thumb {
 .section-contact-color {
   background-color: #f0a5be85;
 }
+.section-subscribe-color {
+  background-color: #cea5f090;
+}
 /* ENS SECTION PLATFORM */
 
 /* SECTION PLANS */
@@ -561,6 +588,24 @@ section ul {
 .section-contact ul {
   list-style: none;
 }
+
+.section-subscribe {
+  position: absolute;
+  display: flex;
+  width: 40%;
+
+  height: 15rem;
+
+  right: 0;
+  margin-right: 4rem;
+  top: 132rem;
+  z-index: 9;
+  font-size: 0.8vw;
+}
+.section-subscribe ul {
+  list-style: none;
+}
+
 .section-1-5 {
   position: absolute;
   display: flex;

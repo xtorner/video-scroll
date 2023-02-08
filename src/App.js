@@ -16,6 +16,21 @@ import TextHoverEffect from "./components/utils/TextHoverEffect";
 import PerspectiveBox from "./components/utils/PerspectiveBox";
 import EarthText from "./components/utils/EarthText";
 
+const Anchor = React.forwardRef((props, ref) => <div ref={ref} {...props} />);
+const VideoComponent = React.forwardRef((props, ref) => (
+  <video
+    playsInline
+    muted
+    preload="auto"
+    ref={ref}
+    src={props.video}
+    width="100%"
+    height="100%"
+    onLoadedData={props.handleLoadedData}
+    onTimeUpdate={props.handleTimeUpdate}
+  />
+));
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [isVideoVisible, setIsVideoVisible] = useState(false);
@@ -47,6 +62,7 @@ function App() {
 
   const handleAnchor = (anchorId) => {
     const anchorRef = refs.get(anchorId);
+    console.log(anchorRef);
     anchorRef.current.scrollIntoView({
       alignToTop: true,
       behavior: "smooth",
@@ -83,7 +99,7 @@ function App() {
       });
       if (window.scrollY > 10) {
         const scrollPos = window.scrollY / 10.5;
-        console.log(window.scrollY, videoEl.current.duration);
+        // console.log(window.scrollY, videoEl.current.duration);
         videoEl.current.currentTime = scrollPos / 10;
         setClassFooter(
           window.scrollY > 1780
@@ -104,17 +120,16 @@ function App() {
     // document.addEventListener("contextmenu", (event) => event.preventDefault());
   }, []);
 
-  //useWindowResize(videoEl);
+  useWindowResize(videoEl);
 
-  const handleLoadVideo = () => {
-    setIsLoading(false);
-  };
+  // const handleLoadVideo = () => {
+  //   setIsLoading(false);
+  // };
 
   useEffect(() => {
     // simulate loading the entire app
     setTimeout(() => {
       setIsLoading(false);
-      //videoEl.current.currentTime = 1;
     }, 1500);
   }, []);
   return (
@@ -193,7 +208,7 @@ function App() {
               className="scroll-warn"
               onClick={() => handleAnchor("anchor1")}
             >
-              <a href="#anchor1">Scroll down</a>
+              <span>Scroll down</span>
 
               <div className="arrow">
                 <svg
@@ -213,27 +228,10 @@ function App() {
               isVideoVisible ? ` video-screen stuck` : `video-screen free`
             }
           >
-            <video
-              playsInline
-              muted
-              preload="auto"
-              ref={videoEl}
-              src={video}
-              width="100%"
-              height="100%"
-              onLoadedData={handleLoadedData}
-              onTimeUpdate={handleTimeUpdate}
-            />
+            <VideoComponent video={video} ref={videoEl} />
           </div>
-          <ScrollIntoView
-            selector="#anchor1"
-            smooth
-            duration={80000}
-            ref={anchor1Ref}
-          >
-            <div id="anchor1" className="anchor1"></div>
-          </ScrollIntoView>
-          {/* <div ref={anchor1Ref} id="anchor1" className="anchor1"></div> */}
+
+          <Anchor ref={anchor1Ref} id="anchor1" className="anchor1" />
 
           <section
             className={`section section-platform fade ${
@@ -274,7 +272,7 @@ function App() {
             </PerspectiveBox>
           </section>
 
-          <div ref={anchor2Ref} id="anchor2" className="anchor2"></div>
+          <Anchor ref={anchor2Ref} id="anchor2" className="anchor2" />
 
           <section
             className={`section section-plans fade ${
@@ -303,19 +301,13 @@ function App() {
                           Become a user of our educational platform and become
                           part of a worldwide community of entrepreneurs. Join
                           our mailing list and we will contact you when it is
-                          ready -{" "}
-                          <a
-                            href="#"
-                            alt=""
-                            danger
-                            size="small"
-                            onClick={(e) => {
-                              e.preventDefault();
-                              alert("soon");
-                            }}
+                          ready
+                          <div
+                            className="button"
+                            onClick={() => handleAnchor("anchor5")}
                           >
                             Subscribe to our newsletter
-                          </a>
+                          </div>
                         </p>
                       </li>
                     </ul>
@@ -325,7 +317,7 @@ function App() {
             </PerspectiveBox>
           </section>
 
-          <div ref={anchor3Ref} id="anchor3" className="anchor3"></div>
+          <Anchor ref={anchor3Ref} id="anchor3" className="anchor3" />
           <section
             className={`section section-about-us fade ${
               elements.element4 ? "visible" : "hidden"
@@ -364,7 +356,7 @@ function App() {
               </BackgroundWithText>
             </PerspectiveBox>
           </section>
-          <div ref={anchor4Ref} id="anchor4" className="anchor4"></div>
+          <Anchor ref={anchor4Ref} id="anchor4" className="anchor4" />
           <section
             className={`section section-theteam fade ${
               elements.element5 ? "visible" : "hidden"
@@ -427,7 +419,7 @@ As a <strong>Site Reliability Engineer (SRE)</strong>, is responsible of impleme
               </BackgroundWithText>
             </PerspectiveBox>
           </section>
-          <div ref={anchor5Ref} id="anchor5" className="anchor5"></div>
+          <Anchor ref={anchor5Ref} id="anchor5" className="anchor5" />
           <section
             className={`section section-contact fade ${
               elements.element6 ? "visible" : "hidden"
@@ -463,7 +455,9 @@ As a <strong>Site Reliability Engineer (SRE)</strong>, is responsible of impleme
                     </div>
 
                     <div className="col-md-12 button-contact">
-                      <button type="submit">SEND</button>
+                      <button type="submit" className="button">
+                        SEND
+                      </button>
                     </div>
                   </div>
                   {/* <div className='row  button-flip-wrapper'>
@@ -474,8 +468,53 @@ As a <strong>Site Reliability Engineer (SRE)</strong>, is responsible of impleme
               </BackgroundWithText>
             </PerspectiveBox>
           </section>
+          <section
+            className={`section section-subscribe fade ${
+              elements.element6 ? "visible" : "hidden"
+            }`}
+          >
+            <PerspectiveBox
+              initialPosition={[0.3, -0.58]}
+              data="section-subscribe-color sectionx"
+            >
+              <BackgroundWithText>
+                <h2>Newsletter Subscribe</h2>
+
+                <div className="form-wrapper">
+                  <div className="row">
+                    <div className="col-md-6">
+                      <ul>
+                        <li>
+                          <input
+                            type="text"
+                            name="subscribe-email"
+                            placeholder="Your Email:"
+                          />
+                        </li>
+                      </ul>
+                    </div>
+
+                    {/* <div className="col-md-6">
+                      <input type="text" placeholder="Your Email:" />
+                    </div>
+
+                    <div className="col-md-12">
+                      <textarea type="text" placeholder="Your Message:" />
+                    </div>
+*/}
+                    <div className="col-md-12 button-contact">
+                      <button type="submit" className="button">
+                        SUBSCRIBE
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </BackgroundWithText>
+            </PerspectiveBox>
+          </section>
+
           <section className="section section-1-5">
-            <div className={classFooter} ref={footer}>
+            <Anchor className={classFooter} ref={footer}>
               <footer>
                 <div className="container">
                   <ul>
@@ -552,7 +591,7 @@ As a <strong>Site Reliability Engineer (SRE)</strong>, is responsible of impleme
                   </ul>
                 </div>
               </footer>
-            </div>
+            </Anchor>
           </section>
         </div>
       )}
