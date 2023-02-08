@@ -301,7 +301,7 @@ function App() {
                         </p>
                       </li>
                       <li className="mt-4">
-                        <h3>Are you a college student?</h3>
+                        <h3>Are you a schools student?</h3>
                         <p>
                           Become a user of our educational platform and become
                           part of a worldwide community of entrepreneurs. Join
@@ -512,7 +512,7 @@ As a <strong>Site Reliability Engineer (SRE)</strong>, is responsible of impleme
                           href="#plans"
                           onClick={() => handleAnchor("anchor2")}
                         >
-                          College students
+                          Schools students
                         </a>
                       </p>
                     </li>
