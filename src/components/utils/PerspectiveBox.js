@@ -11,6 +11,7 @@ const PerspectiveBox = ({ children, initialPosition, data, ...props }) => {
     let box = el.getBoundingClientRect();
     let calcX = -(y - box.y - box.height / 2) / Constrain;
     let calcY = (x - box.x - box.width / 2) / Constrain;
+    console.log(calcX, calcY);
     return `perspective(100px) rotateX(${calcX}deg) rotateY(${calcY}deg)`;
   };
 

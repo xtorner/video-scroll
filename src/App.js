@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 
 import video from "./assets/vid.mp4";
-import { Button, NavLink } from "react-bootstrap";
+import { NavLink } from "react-bootstrap";
 import useWindowResize from "./components/hooks/windowresize";
 import LoaderBlock from "./components/utils/loader-block/LoaderBlock";
 import BackgroundWithText from "./components/utils/BackgroundWithText";
@@ -84,15 +84,12 @@ function App() {
       if (window.scrollY > 10) {
         const scrollPos = window.scrollY / 10.5;
         console.log(window.scrollY, videoEl.current.duration);
-        //const scrollVelocity = videoEl.current.scrollTop / event.deltaY;
         videoEl.current.currentTime = scrollPos / 10;
         setClassFooter(
           window.scrollY > 1780
             ? "section-footer-free"
             : "section-footer-blocked"
         );
-
-        //videoEl.current.currentTime = scrollVelocity / 2;
       }
     };
     window.addEventListener("scroll", handleScroll);
@@ -102,10 +99,10 @@ function App() {
     };
   }, []);
 
-  // useEffect(() => {
-  //   // Add event listener to disable right-click context menu
-  //   document.addEventListener("contextmenu", (event) => event.preventDefault());
-  // }, []);
+  useEffect(() => {
+    // Add event listener to disable right-click context menu
+    // document.addEventListener("contextmenu", (event) => event.preventDefault());
+  }, []);
 
   //useWindowResize(videoEl);
 
@@ -307,15 +304,18 @@ function App() {
                           part of a worldwide community of entrepreneurs. Join
                           our mailing list and we will contact you when it is
                           ready -{" "}
-                          <Button
+                          <a
                             href="#"
+                            alt=""
+                            danger
+                            size="small"
                             onClick={(e) => {
                               e.preventDefault();
                               alert("soon");
                             }}
                           >
                             Subscribe to our newsletter
-                          </Button>
+                          </a>
                         </p>
                       </li>
                     </ul>
@@ -371,7 +371,7 @@ function App() {
             }`}
           >
             <PerspectiveBox
-              initialPosition={[1.3, 1.2]}
+              initialPosition={[0, 0.83]}
               data="section-theteam-color sectionx"
             >
               <BackgroundWithText>
@@ -463,7 +463,7 @@ As a <strong>Site Reliability Engineer (SRE)</strong>, is responsible of impleme
                     </div>
 
                     <div className="col-md-12 button-contact">
-                      <Button type="submit">SEND</Button>
+                      <button type="submit">SEND</button>
                     </div>
                   </div>
                   {/* <div className='row  button-flip-wrapper'>
