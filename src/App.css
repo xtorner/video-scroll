@@ -17,10 +17,12 @@
 
 .fade.visible {
   opacity: 1;
+  z-index: 999;
 }
 
 .fade.hidden {
   opacity: 0;
+  z-index: 0;
 }
 
 .App {
@@ -532,7 +534,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: flex-start;
   align-items: flex-start;
   left: 100px;
-
+  z-index: 999;
   top: 91rem;
 }
 section p,
@@ -554,7 +556,7 @@ section ul {
   justify-content: flex-start;
 
   top: 95rem;
-  z-index: 999;
+  z-index: 9;
   font-size: 1vw;
 }
 .section-contact ul {
