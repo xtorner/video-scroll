@@ -548,7 +548,7 @@ As a <strong>Site Reliability Engineer (SRE)</strong>, is responsible of impleme
                           href="#plans"
                           onClick={() => handleAnchor("anchor2")}
                         >
-                          Schools students
+                          School students
                         </a>
                       </p>
                     </li>
