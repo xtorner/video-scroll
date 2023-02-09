@@ -493,7 +493,7 @@ body::-webkit-scrollbar-thumb {
 .section.section-plans {
   display: flex;
   width: 49%;
-  height: 21rem;
+  height: 23rem;
   margin-right: 2rem;
   left: 45%;
   flex-direction: column;
@@ -927,6 +927,6 @@ section ul {
     font-size: 1.1vw !important;
   }
   .section-plans {
-    min-height: 45% !important;
+    min-height: 49% !important;
   }
 }
