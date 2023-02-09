@@ -430,37 +430,55 @@ As a <strong>Site Reliability Engineer (SRE)</strong>, is responsible of impleme
                 <h2>Contact Us</h2>
 
                 <div className="form-wrapper">
-                  <div className="row">
-                    <div className="col-md-6">
-                      <ul>
-                        <li>
+                  <form>
+                    <div className="row">
+                      <div className="col-md-6">
+                        <div className="form-group">
                           <input
                             type="text"
-                            name="your-name"
-                            placeholder="Your Name:"
+                            id="name-contact"
+                            className="name-contact"
+                            required
                           />
-                        </li>
-                      </ul>
-                    </div>
+                          <label for="name-contact">Your Name:</label>
+                        </div>
+                      </div>
 
-                    <div className="col-md-6">
-                      <input type="text" placeholder="Your Email:" />
-                    </div>
+                      <div className="col-md-6">
+                        <div className="form-group">
+                          <input
+                            type="text"
+                            id="email-contact"
+                            className="email-contact"
+                            required
+                          />
+                          <label for="email-contact">Your Email</label>
+                        </div>
+                      </div>
 
-                    <div className="col-md-12">
-                      <textarea type="text" placeholder="Your Message:" />
-                    </div>
+                      <div className="col-md-12">
+                        <div className="form-group">
+                          <textarea
+                            type="textarea"
+                            id="message-contact"
+                            className="message-contact"
+                            required
+                          />
+                          <label for="message-contact">Your Message:</label>
+                        </div>
+                      </div>
 
-                    <div className="col-md-12 button-contact">
-                      <button type="submit" className="button">
-                        SEND
-                      </button>
+                      <div className="col-md-12 button-contact">
+                        <button type="submit" className="button">
+                          SEND
+                        </button>
+                      </div>
                     </div>
-                  </div>
-                  {/* <div className='row  button-flip-wrapper'>
+                    {/* <div className='row  button-flip-wrapper'>
                                   <input className="checkbox1" type="checkbox" id="reg-log1" name="reg-log1" />
                                   <label htmlFor="reg-log1" onClick={ switchModeHandler } />
                                 </div> */}
+                  </form>
                 </div>
               </BackgroundWithText>
             </PerspectiveBox>
@@ -479,16 +497,18 @@ As a <strong>Site Reliability Engineer (SRE)</strong>, is responsible of impleme
 
                 <div className="form-wrapper">
                   <div className="row">
-                    <div className="col-md-6">
-                      <ul>
-                        <li>
+                    <div className="col-md-12">
+                      <form>
+                        <div class="form-group">
                           <input
                             type="text"
-                            name="subscribe-email"
-                            placeholder="Your Email:"
+                            id="input"
+                            className="input"
+                            required
                           />
-                        </li>
-                      </ul>
+                          <label for="input">Your Email</label>
+                        </div>
+                      </form>
                     </div>
 
                     {/* <div className="col-md-6">
