@@ -25,7 +25,8 @@ const BackgroundWithText = ({ children }) => {
     <>
       <div className="child">{children}</div>
       <svg width="100%" height="100%" className="eseuve">
-        <path fill={fill} d={`M ${cloudPoints} Z`} />
+        {<span>`M ${cloudPoints} Z`</span>}
+        {cloudPoints && <path fill={fill} d={`M ${cloudPoints} Z`} />}
       </svg>
     </>
   );

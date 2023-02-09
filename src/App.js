@@ -9,12 +9,9 @@ import useWindowResize from "./components/hooks/windowresize";
 import LoaderBlock from "./components/utils/loader-block/LoaderBlock";
 import BackgroundWithText from "./components/utils/BackgroundWithText";
 import ImageCarousel from "./components/utils/ImageCarousel";
-// import SmokeScene from "./components/utils/smoke/Smoke";
-import ScrollIntoView from "react-scroll-into-view";
 import Typewriter from "./components/utils/Typewriter";
 import TextHoverEffect from "./components/utils/TextHoverEffect";
 import PerspectiveBox from "./components/utils/PerspectiveBox";
-import EarthText from "./components/utils/EarthText";
 
 const Anchor = React.forwardRef((props, ref) => <div ref={ref} {...props} />);
 const VideoComponent = React.forwardRef((props, ref) => (
@@ -296,7 +293,7 @@ function App() {
                         </p>
                       </li>
                       <li className="mt-4">
-                        <h3>Are you a schools student?</h3>
+                        <h3>Are you a school student?</h3>
                         <p>
                           Become a user of our educational platform and become
                           part of a worldwide community of entrepreneurs. Join
