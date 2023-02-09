@@ -550,7 +550,7 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   display: flex;
   width: 50%;
-  height: 26rem;
+  height: 27rem;
   justify-content: center;
   left: 100px;
 
