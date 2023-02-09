@@ -24,14 +24,16 @@ const BackgroundWithText = ({ children }) => {
   return (
     <>
       <div className="child">{children}</div>
-      <svg width="100%" height="100%" className="eseuve">
+      <svg width="100%" height="100%" className="eseuve" data-testid="eseuve">
         <defs>
           <linearGradient id="black-to-white" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#feeded" />
-            <stop offset="100%" stop-color="#ffffff" />
+            <stop offset="0%" stopColor="#feeded" />
+            <stop offset="100%" stopColor="#ffffff" />
           </linearGradient>
         </defs>
-        {cloudPoints && <path fill={fill} d={`M ${cloudPoints} Z`} />}
+        {cloudPoints && (
+          <path fill={fill} d={`M ${cloudPoints} Z`} data-testid="path" />
+        )}
       </svg>
     </>
   );

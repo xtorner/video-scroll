@@ -340,6 +340,11 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   border: 1px solid red;
 }
+.icon-team svg {
+  width: 1rem !important;
+  color: #406eb5;
+  padding-right: 0.2rem;
+}
 .button {
   display: flex;
   cursor: pointer;
@@ -819,10 +824,6 @@ section ul {
   color: #272727;
 }
 
-.icon-team {
-  width: 1rem;
-  color: #406eb5;
-}
 .link-icon-team {
   text-decoration: none;
 }
