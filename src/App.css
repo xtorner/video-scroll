@@ -444,6 +444,29 @@ body::-webkit-scrollbar-thumb {
   justify-content: flex-start;
   font-size: 1vw;
 }
+.section-legal {
+  position: relative;
+  filter: blur(2px) brightness(98%);
+}
+
+.section-legal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: inherit;
+  filter: none;
+}
+
+.content-legal {
+  position: relative;
+  z-index: 1;
+  padding: 3rem;
+  height: 95%;
+  overflow-y: scroll;
+}
 
 /* @media (min-width: 1440px) {
   .section-platform {
@@ -486,6 +509,9 @@ body::-webkit-scrollbar-thumb {
 }
 .section-subscribe-color {
   background-color: #cea5f090;
+}
+.section-legal-color {
+  background-color: #cddedf;
 }
 /* ENS SECTION PLATFORM */
 
