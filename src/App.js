@@ -143,10 +143,14 @@ function App() {
         </>
       ) : (
         <div className="container-fluid">
-          <Modal isOpen={showModal} onClose={toggleModal}>
+          <Modal
+            isOpen={showModal}
+            onClose={toggleModal}
+            className="section-legal"
+          >
             <PerspectiveBox
-              initialPosition={[-0.5, 1.4]}
-              data="section-platform-color sectionx"
+              initialPosition={[0, 0]}
+              data="section-platform-color"
             >
               <div className="content-legal">
                 <h3>LEGAL NOTICE</h3>
@@ -697,7 +701,7 @@ As a <strong>Site Reliability Engineer (SRE)</strong>, is responsible of impleme
                             className="name-contact"
                             required
                           />
-                          <label for="name-contact">Your Name:</label>
+                          <label htmlFor="name-contact">Your Name:</label>
                         </div>
                       </div>
 
@@ -709,7 +713,7 @@ As a <strong>Site Reliability Engineer (SRE)</strong>, is responsible of impleme
                             className="email-contact"
                             required
                           />
-                          <label for="email-contact">Your Email</label>
+                          <label htmlFor="email-contact">Your Email</label>
                         </div>
                       </div>
 
@@ -721,7 +725,7 @@ As a <strong>Site Reliability Engineer (SRE)</strong>, is responsible of impleme
                             className="message-contact"
                             required
                           />
-                          <label for="message-contact">Your Message:</label>
+                          <label htmlFor="message-contact">Your Message:</label>
                         </div>
                       </div>
 
@@ -756,14 +760,14 @@ As a <strong>Site Reliability Engineer (SRE)</strong>, is responsible of impleme
                   <div className="row">
                     <div className="col-md-12">
                       <form>
-                        <div class="form-group">
+                        <div className="form-group">
                           <input
                             type="text"
                             id="input"
                             className="input"
                             required
                           />
-                          <label for="input">Your Email</label>
+                          <label htmlFor="input">Your Email</label>
                         </div>
                       </form>
                     </div>

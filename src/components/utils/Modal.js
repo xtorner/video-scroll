@@ -22,7 +22,7 @@ const Modal = ({ isOpen, onClose, children }) => {
         ref={modalRef}
         style={{
           position: "fixed",
-          zIndex: "9999999",
+          zIndex: "9999",
           top: 0,
           left: 0,
           right: 0,
@@ -37,6 +37,7 @@ const Modal = ({ isOpen, onClose, children }) => {
         <div
           style={{
             background: "transparent",
+            zIndex: "99999",
             borderRadius: "5px",
             width: "70%",
             height: "70%",

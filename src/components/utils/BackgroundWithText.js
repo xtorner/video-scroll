@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import * as noise from "noisejs";
+import noise from "noisejs";
 
 const BackgroundWithText = ({ children }) => {
   const [fill, setFill] = useState(getGradientColor);
