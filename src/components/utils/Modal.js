@@ -42,7 +42,6 @@ const Modal = ({ isOpen, onClose, children }) => {
             height: "70%",
             top: "1rem",
             padding: "2rem",
-            overflow: "auto",
           }}
         >
           {children}
