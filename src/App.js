@@ -13,6 +13,8 @@ import Typewriter from "./components/utils/Typewriter";
 import TextHoverEffect from "./components/utils/TextHoverEffect";
 import PerspectiveBox from "./components/utils/PerspectiveBox";
 import Modal from "./components/utils/Modal";
+import BlockText from "./components/utils/BlockText";
+import MagnetLetters from "./components/utils/MagnetLetters";
 
 const Anchor = React.forwardRef((props, ref) => <div ref={ref} {...props} />);
 const VideoComponent = React.forwardRef((props, ref) => (
@@ -453,14 +455,16 @@ function App() {
               elements.element1 ? "visible" : "hidden"
             }`}
           >
-            <h1>
+            <PerspectiveBox initialPosition={[-0.5, 2.4]} data="typewriter">
               <Typewriter
                 text="Empower your child
               with a 21st-century education
               to 
               succeed in the age of AI "
               ></Typewriter>
-            </h1>
+            </PerspectiveBox>
+            {/* <BlockText /> 
+              <MagnetLetters text="proves" />*/}
 
             <div
               className="scroll-warn"
@@ -473,8 +477,8 @@ function App() {
                   xmlns="http://www.w3.org/2000/svg"
                   id="Outline"
                   viewBox="0 0 24 24"
-                  width="512"
-                  height="512"
+                  width="25"
+                  height="25"
                 >
                   <path d="M23.12,9.91,19.25,6a1,1,0,0,0-1.42,0h0a1,1,0,0,0,0,1.41L21.39,11H1a1,1,0,0,0-1,1H0a1,1,0,0,0,1,1H21.45l-3.62,3.61a1,1,0,0,0,0,1.42h0a1,1,0,0,0,1.42,0l3.87-3.88A3,3,0,0,0,23.12,9.91Z" />
                 </svg>
