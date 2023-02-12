@@ -1,11 +1,15 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 
 const Modal = ({ isOpen, onClose, children }) => {
   const modalRef = useRef(null);
+  const [isClosing, setIsClosing] = useState(false);
 
   const handleClickOutside = (event) => {
     if (modalRef.current && !modalRef.current.contains(event.target)) {
-      onClose();
+      setIsClosing(true);
+      setTimeout(() => {
+        onClose();
+      }, 300);
     }
   };
 
@@ -31,6 +35,8 @@ const Modal = ({ isOpen, onClose, children }) => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          opacity: isClosing ? 0 : 1,
+          transition: "opacity 0.3s ease-in-out",
         }}
         onClick={onClose}
       >

@@ -15,11 +15,13 @@ const Typewriter = ({ text }) => {
   }, [text]);
 
   return (
-    <p
-      dangerouslySetInnerHTML={{
-        __html: displayedText.replace(/\n/g, "<br />"),
-      }}
-    />
+    <div>
+      <p
+        dangerouslySetInnerHTML={{
+          __html: displayedText.replace(/\n/g, "<br />"),
+        }}
+      />
+    </div>
   );
 };
 

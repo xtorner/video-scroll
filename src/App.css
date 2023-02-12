@@ -11,7 +11,7 @@
 }
 
 .fade {
-  transition: opacity 0.5s;
+  transition: all 0.5s ease-in-out;
   opacity: 0;
 }
 
@@ -365,6 +365,19 @@ body::-webkit-scrollbar-thumb {
   background-color: rgb(89, 89, 232);
   color: white;
 }
+.section-plans button {
+  display: flex;
+  cursor: pointer;
+  margin-left: 25%;
+  margin-top: 1rem;
+  justify-content: center;
+  color: rgb(107, 107, 209);
+  width: auto !important;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  background-color: rgb(89, 89, 232) !important;
+  color: white;
+}
 .button:hover {
   color: #bbb8b8;
 }
@@ -613,6 +626,7 @@ body::-webkit-scrollbar-thumb {
 section p,
 section h2,
 section h3,
+section h4,
 section ul {
   padding-top: 0;
   padding-left: 2%;
@@ -961,7 +975,7 @@ section ul {
   }
   .section-platform {
     min-height: 49%;
-    width: 52% !important;
+    width: 54% !important;
     left: 10rem !important;
     font-size: 1.1vw !important;
   }
@@ -1049,8 +1063,23 @@ label {
   border-radius: 50%;
   background-color: blue;
 }
+.neon {
+  color: #fff;
+  animation: neon-text-animation 2s ease-in-out infinite;
+}
 
 .typewriter {
   padding: 2.8rem;
   background: #7ad1e57d;
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

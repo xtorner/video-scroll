@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Typewriter from "./Typewriter";
 
 function ImageCarousel({ images }) {
   const [activeIndex, setActiveIndex] = useState(0);

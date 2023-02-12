@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import LoaderBlock from "./loader-block/LoaderBlock";
+
 
 const EarthText = () => {
   const [circles, setCircles] = useState([]);
