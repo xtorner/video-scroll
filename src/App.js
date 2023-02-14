@@ -484,7 +484,7 @@ As a <strong>Site Reliability Engineer (SRE)</strong>, is responsible of impleme
                         <div className="form-group">
                           <input
                             type="checkbox"
-                            id="legalcheck"
+                            id="contactcheck"
                             required
                             className="checkbox"
                           />
@@ -538,7 +538,7 @@ As a <strong>Site Reliability Engineer (SRE)</strong>, is responsible of impleme
                         <div className="form-group">
                           <input
                             type="checkbox"
-                            id="legalcheck"
+                            id="subscribecheck"
                             required
                             className="checkbox"
                           />
