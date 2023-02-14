@@ -40,6 +40,7 @@ const VideoComponent = React.forwardRef((props, ref) => (
 ));
 
 function App() {
+  const isEdge = /Edge/.test(navigator.userAgent);
   const [isLoading, setIsLoading] = useState(true);
   const [isVideoVisible, setIsVideoVisible] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -115,8 +116,9 @@ function App() {
         const scrollPos = window.scrollY / 10.5;
         // console.log(window.scrollY, videoEl.current.duration);
         videoEl.current.currentTime = scrollPos / 10;
+        const endScroll = isEdge ? 1780 : 1600;
         setClassFooter(
-          window.scrollY > 1780
+          window.scrollY > endScroll
             ? "section-footer-free"
             : "section-footer-blocked"
         );
@@ -131,7 +133,7 @@ function App() {
 
   useEffect(() => {
     // Add event listener to disable right-click context menu
-    document.addEventListener("contextmenu", (event) => event.preventDefault());
+    // document.addEventListener("contextmenu", (event) => event.preventDefault());
   }, []);
 
   useWindowResize(videoEl);
@@ -165,6 +167,27 @@ function App() {
   const [showModal, setShowModal] = useState(false);
 
   const toggleModal = () => setShowModal(!showModal);
+
+  const handleSubmitContact = (e) => {
+    e.preventDefault();
+    const { emailcontact, namecontact, messagecontact } = e.target;
+    const dataObject = {
+      emailcontact: emailcontact.value,
+      namecontact: namecontact.value,
+      messagecontact: messagecontact.value,
+      browser: navigator.userAgent,
+    };
+    console.log(window);
+  };
+  const handleSubmitSubscribe = (e) => {
+    e.preventDefault();
+    const { emailsubscribe } = e.target;
+    const dataObject = {
+      emailsubscribe: emailsubscribe.value,
+      browser: navigator.userAgent,
+    };
+    console.log(window);
+  };
 
   return (
     <>
@@ -320,34 +343,7 @@ function App() {
                   className="plans-wrapper"
                   ref={plansHtmlRef}
                   dangerouslySetInnerHTML={{ __html: plansHTML }}
-                >
-                  {/* <div className="paragraf">
-                    <ul>
-                      <li>
-                        <h3>Are you an educational institution?</h3>
-                        <p>
-                          Contact us for tailor-made learning journeys according
-                          to the needs of your institution
-                        </p>
-                      </li>
-                      <li className="mt-4">
-                        <h3>Are you a school student?</h3>
-                        <p>
-                          Become a user of our educational platform and become
-                          part of a worldwide community of entrepreneurs. Join
-                          our mailing list and we will contact you when it is
-                          ready
-                          <span
-                            className="button"
-                            onClick={() => handleAnchor("anchor5")}
-                          >
-                            Subscribe to our newsletter
-                          </span>
-                        </p>
-                      </li>
-                    </ul>
-                  </div> */}
-                </div>
+                ></div>
               </BackgroundWithText>
             </PerspectiveBox>
           </section>
@@ -447,14 +443,14 @@ As a <strong>Site Reliability Engineer (SRE)</strong>, is responsible of impleme
                 <h2>Contact Us</h2>
 
                 <div className="form-wrapper">
-                  <form>
+                  <form onSubmit={handleSubmitContact}>
                     <div className="row">
                       <div className="col-md-6">
                         <div className="form-group">
                           <input
                             type="text"
-                            id="name-contact"
-                            className="name-contact"
+                            id="namecontact"
+                            className="name-contact input"
                             required
                           />
                           <label htmlFor="name-contact">Your Name:</label>
@@ -465,8 +461,8 @@ As a <strong>Site Reliability Engineer (SRE)</strong>, is responsible of impleme
                         <div className="form-group">
                           <input
                             type="email"
-                            id="email-contact"
-                            className="email-contact"
+                            id="emailcontact"
+                            className="email-contact input"
                             required
                           />
                           <label htmlFor="email-contact">Your Email</label>
@@ -477,14 +473,26 @@ As a <strong>Site Reliability Engineer (SRE)</strong>, is responsible of impleme
                         <div className="form-group">
                           <textarea
                             type="textarea"
-                            id="message-contact"
-                            className="message-contact"
+                            id="messagecontact"
+                            className="message-contact textarea"
                             required
                           />
                           <label htmlFor="message-contact">Your Message:</label>
                         </div>
                       </div>
-
+                      <div className="col-md-12">
+                        <div className="form-group">
+                          <input
+                            type="checkbox"
+                            id="legalcheck"
+                            required
+                            className="checkbox"
+                          />
+                          <label htmlFor="legalcheck">
+                            I have read and accept the Privacy Policy.
+                          </label>
+                        </div>
+                      </div>
                       <div className="col-md-12 button-contact">
                         <button type="submit" className="button">
                           SEND
@@ -514,7 +522,7 @@ As a <strong>Site Reliability Engineer (SRE)</strong>, is responsible of impleme
 
                 <div className="form-wrapper">
                   <div className="row">
-                    <form>
+                    <form onSubmit={handleSubmitSubscribe}>
                       <div className="col-md-12">
                         <div className="form-group">
                           <input
@@ -524,6 +532,19 @@ As a <strong>Site Reliability Engineer (SRE)</strong>, is responsible of impleme
                             required
                           />
                           <label htmlFor="input">Your Email</label>
+                        </div>
+                      </div>
+                      <div className="col-md-12">
+                        <div className="form-group">
+                          <input
+                            type="checkbox"
+                            id="legalcheck"
+                            required
+                            className="checkbox"
+                          />
+                          <label htmlFor="legalcheck">
+                            I have read and accept the Privacy Policy.
+                          </label>
                         </div>
                       </div>
 
