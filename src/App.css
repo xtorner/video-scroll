@@ -960,13 +960,13 @@ section ul {
     min-height: 50%;
     width: 80% !important;
     left: 1.5rem !important;
-    font-size: 0.6rem !important;
+    font-size: 0.7rem !important;
   }
   .section-theteam {
     min-height: 50%;
     width: 80% !important;
     left: 1.5rem !important;
-    font-size: 0.6rem !important;
+    font-size: 0.7rem !important;
   }
 }
 
@@ -986,6 +986,12 @@ section ul {
   .section-platform {
     min-height: 49%;
     width: 54% !important;
+    left: 10rem !important;
+    font-size: 1.1vw !important;
+  }
+  .section-theteam {
+    min-height: 49%;
+    width: 74% !important;
     left: 10rem !important;
     font-size: 1.1vw !important;
   }
