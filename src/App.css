@@ -757,7 +757,7 @@ section ul {
   overflow-y: scroll;
   padding-top: 0.2rem;
   margin-left: 0rem;
-
+  margin-right: 1rem;
   transition: height 0.3s ease-out;
 }
 
