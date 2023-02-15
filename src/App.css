@@ -995,12 +995,12 @@ section ul {
     left: 10rem !important;
     font-size: 1.1vw !important;
   }
-  .section-theteam::-webkit-scrollbar {
+  div::-webkit-scrollbar {
     width: 0.5em;
     background-color: transparent;
   }
 
-  .section-theteam::-webkit-scrollbar-thumb {
+  div::-webkit-scrollbar-thumb {
     background-color: transparent;
   }
   .section-plans {
