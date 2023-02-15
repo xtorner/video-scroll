@@ -186,7 +186,7 @@ function App() {
       emailsubscribe: emailsubscribe.value,
       browser: navigator.userAgent,
     };
-    console.log(window);
+    console.log(dataObject);
   };
 
   return (
@@ -527,7 +527,7 @@ As a <strong>Site Reliability Engineer (SRE)</strong>, is responsible of impleme
                         <div className="form-group">
                           <input
                             type="email"
-                            id="input"
+                            id="emailsubscribe"
                             className="input"
                             required
                           />

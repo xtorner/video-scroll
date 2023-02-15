@@ -621,7 +621,7 @@ body::-webkit-scrollbar-thumb {
 .section-theteam {
   position: absolute;
   display: flex;
-  width: 62%;
+  width: 65%;
   height: 36rem;
   justify-content: flex-start;
   align-items: flex-start;
