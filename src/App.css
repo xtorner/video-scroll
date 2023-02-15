@@ -962,6 +962,12 @@ section ul {
     left: 1.5rem !important;
     font-size: 0.6rem !important;
   }
+  .section-theteam {
+    min-height: 50%;
+    width: 80% !important;
+    left: 1.5rem !important;
+    font-size: 0.6rem !important;
+  }
 }
 
 /* @media (min-width: 768px) and (max-width: 768px) {
