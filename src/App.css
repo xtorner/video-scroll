@@ -691,6 +691,9 @@ section ul {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+
+  margin: 1rem;
+  margin-top: 0;
 }
 .image-carousel {
   position: relative;
@@ -753,22 +756,13 @@ section ul {
 .text-slide-container {
   position: relative;
   height: 100%;
-  overflow: hidden;
-  overflow-y: scroll;
-  padding-top: 0.2rem;
-  margin-left: 0rem;
-  margin-right: 1rem;
-  transition: height 0.3s ease-out;
-}
-
-.text-slide-container {
-  position: relative;
-  height: 100%;
   width: 70%;
   overflow: hidden;
   overflow-y: scroll;
   padding-top: 0.2rem;
   margin-left: 1rem;
+  margin-right: 5rem;
+
   border-bottom: 1px dotted #393939;
   transition: height 0.3s ease-out;
 }
@@ -777,9 +771,11 @@ section ul {
   color: white;
   padding: 1rem;
   height: auto;
+  word-wrap: break-word;
   left: 1rem;
   position: absolute;
   top: 10rem;
+  margin-right: 1rem;
 }
 .description {
   background: rgba(255, 255, 255, 0.5);
@@ -963,10 +959,27 @@ section ul {
     font-size: 0.7rem !important;
   }
   .section-theteam {
-    min-height: 50%;
-    width: 80% !important;
+    display: flex;
+
+    height: 30rem;
+    width: 95% !important;
     left: 1.5rem !important;
     font-size: 0.7rem !important;
+  }
+  .text-slide-container {
+    display: grid;
+    justify-self: flex-start;
+    align-self: flex-start;
+    height: auto;
+    width: 70%;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-top: 0.2rem;
+    margin-left: 1rem;
+    margin-right: 5rem;
+    overflow-y: hidden;
+    font-size: 0.7rem !important;
+    transition: height 0.3s ease-out;
   }
 }
 
