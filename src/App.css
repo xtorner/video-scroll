@@ -994,6 +994,7 @@ section ul {
     width: 74% !important;
     left: 10rem !important;
     font-size: 1.1vw !important;
+    border: 1px solid red;
   }
   .section-plans {
     min-height: 49% !important;
