@@ -604,7 +604,7 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   border: 1px solid red;
 }
-/* SECTRION ABOUT US */
+/* SECTION ABOUT US */
 .section-about-us {
   position: absolute;
   display: flex;
@@ -955,8 +955,14 @@ section ul {
   .section-platform {
     min-height: 50%;
     width: 80% !important;
-    left: 1.5rem !important;
-    font-size: 0.7rem !important;
+    left: 3.5rem !important;
+    font-size: 2vw !important;
+  }
+  .section-plans {
+    min-height: 50%;
+    width: 80% !important;
+    left: 5.5rem !important;
+    font-size: 2vw !important;
   }
   .section-theteam {
     display: flex;
@@ -978,8 +984,34 @@ section ul {
     margin-left: 1rem;
     margin-right: 5rem;
     overflow-y: hidden;
-    font-size: 0.7rem !important;
+    font-size: 1.5vw;
     transition: height 0.3s ease-out;
+  }
+  .section-about-us {
+    position: absolute;
+    display: flex;
+    width: 65%;
+    height: 22rem;
+    justify-content: center;
+    left: 100px;
+
+    justify-content: flex-start;
+    top: 70rem;
+    font-size: 1.5vw;
+  }
+  .section-contact {
+    height: 31rem;
+    min-height: 50%;
+    width: 80% !important;
+    left: 3.5rem !important;
+    font-size: 2vw !important;
+  }
+  .section-subscribe {
+    height: 17rem;
+    top: 100rem;
+    width: 80% !important;
+    left: 3.5rem !important;
+    font-size: 2vw !important;
   }
 }
 
