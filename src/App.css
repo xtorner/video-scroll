@@ -451,10 +451,10 @@ body::-webkit-scrollbar-thumb {
   /* display: flex;
   flex-direction: column; */
   width: 60%;
-  height: 20vh;
+  height: 20rem;
   align-items: flex-start;
   justify-content: flex-start;
-  font-size: 1vw;
+  font-size: 1.2vw;
 }
 .platform-wrapper {
   display: flex;
@@ -1076,6 +1076,7 @@ form {
   font-size: 1.5rem;
   border-radius: 5px;
   margin-left: 0px;
+  display: flex;
 }
 
 label {
