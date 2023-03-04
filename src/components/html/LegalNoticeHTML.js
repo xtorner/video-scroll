@@ -1,4 +1,4 @@
-const legalNoticeHTML = () => (
+const LegalNoticeHTML = () => (
   <>
     <h3>LEGAL NOTICE</h3>
     <p>
@@ -222,4 +222,4 @@ const legalNoticeHTML = () => (
     </p>
   </>
 );
-export default legalNoticeHTML;
+export default LegalNoticeHTML;

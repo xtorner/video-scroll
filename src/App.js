@@ -15,7 +15,7 @@ import TextHoverEffect from "./components/utils/TextHoverEffect";
 import PerspectiveBox from "./components/utils/PerspectiveBox";
 import Modal from "./components/utils/Modal";
 
-import legalNoticeHTML from "./components/html/LegalNotice.js";
+import LegalNoticeHTML from "./components/html/LegalNoticeHTML";
 
 import PlatformHTML from "./components/html/ThePlatformHTML";
 import AboutUsHTML from "./components/html/AboutUsHTML";
@@ -202,10 +202,9 @@ function App() {
               initialPosition={[0, 0]}
               data="section-platform-color"
             >
-              <div
-                className="content-legal"
-                dangerouslySetInnerHTML={{ __html: legalNoticeHTML }}
-              />
+              <div className="content-legal">
+                <LegalNoticeHTML />
+              </div>
             </PerspectiveBox>
           </Modal>
           <div className="area-top">
