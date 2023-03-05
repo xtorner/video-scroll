@@ -14,6 +14,6 @@ const useWindowResize = (videoEl) => {
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [videoEl]);
 };
 export default useWindowResize;

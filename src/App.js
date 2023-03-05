@@ -1,27 +1,30 @@
 import React, { useState, useRef, useEffect, useLayoutEffect } from "react";
-
+import video from "./assets/vid.mp4";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
-
-import video from "./assets/vid.mp4";
 import { NavLink } from "react-bootstrap";
+
+/** COMPONENT HOOKS */
 import useWindowResize from "./components/hooks/windowresize";
-import LoaderBlock from "./components/utils/loader-block/LoaderBlock";
 import BackgroundWithText from "./components/utils/BackgroundWithText";
-import ImageCarousel from "./components/utils/ImageCarousel";
-import CarrouselData from "./components/utils/CarrouselData";
 import Typewriter from "./components/utils/Typewriter";
 import TextHoverEffect from "./components/utils/TextHoverEffect";
 import PerspectiveBox from "./components/utils/PerspectiveBox";
+
+/** UTILS */
 import Modal from "./components/utils/Modal";
 
+/** EXTERNAL HTML COMPONENTS */
 import LegalNoticeHTML from "./components/html/LegalNoticeHTML";
-
 import PlatformHTML from "./components/html/ThePlatformHTML";
 import AboutUsHTML from "./components/html/AboutUsHTML";
 import PlansHTML from "./components/html/PlansHTML";
-const Anchor = React.forwardRef((props, ref) => <div ref={ref} {...props} />);
+import LoaderBlock from "./components/utils/loader-block/LoaderBlock";
+import ImageCarousel from "./components/utils/ImageCarousel";
+import CarrouselData from "./components/utils/CarrouselData";
 
+/** COMPONENTS */
+const Anchor = React.forwardRef((props, ref) => <div ref={ref} {...props} />);
 const VideoComponent = React.forwardRef((props, ref) => (
   <video
     playsInline
@@ -38,13 +41,12 @@ const VideoComponent = React.forwardRef((props, ref) => (
 
 function App() {
   const isEdge = /Edge/.test(navigator.userAgent);
+
+  /** BASIC STATE CONTROL */
   const [isLoading, setIsLoading] = useState(true);
   const [isVideoVisible, setIsVideoVisible] = useState(false);
   const [progress, setProgress] = useState(0);
   const [classFooter, setClassFooter] = useState("section-footer-blocked");
-  const videoEl = useRef(null);
-  const footer = useRef(null);
-  const plansHtmlRef = useRef(null);
   const [elements, setElements] = useState({
     element1: true,
     element2: false,
@@ -53,6 +55,12 @@ function App() {
     element5: false,
     element6: false,
   });
+
+  /** DIFERED REFERENCES */
+  const videoEl = useRef(null);
+  const footer = useRef(null);
+  const plansHtmlRef = useRef(null);
+
   const anchor1Ref = useRef(null);
   const anchor2Ref = useRef(null);
   const anchor3Ref = useRef(null);
@@ -67,14 +75,15 @@ function App() {
     ["anchor5", anchor5Ref],
   ]);
 
+  // This function handles clicking on the subscribe button to subscribe user to the newsletter
   const handleClickSubscribeNewsletter = (event) => {
-    console.log(event);
     handleAnchor("anchor5");
   };
 
+  // The function scrolls into view an element in the document with the given anchorId,
+  // This ensures that the webpage automatically scrolls down or up to the position of the targeted HTMLElement.
   const handleAnchor = (anchorId) => {
     const anchorRef = refs.get(anchorId);
-    // console.log(anchorRef);
     anchorRef.current.scrollIntoView({
       alignToTop: true,
       behavior: "smooth",
@@ -86,17 +95,22 @@ function App() {
     setProgress((videoEl.current.duration / 100) * progress);
   };
 
+  // This function handles the time update event of a video
   const handleTimeUpdate = () => {
+    // calculate progress of the video
     let taim = (videoEl.current.currentTime / videoEl.current.duration) * 100;
+    // check if the end of the video is reached, and set the value of the visibility state accordingly
     if (videoEl.current.currentTime === videoEl.current.duration)
       setIsVideoVisible(true);
+    // check if the current time of the video is at the beginning, and set the value of the visibility state accordingly
     else if (taim === 0) setIsVideoVisible(false);
+    // update the progress state with the calculated progress value
     setProgress(taim);
+    // handle loaded data, possibly for additional functionality
+    handleLoadedData();
   };
 
   useEffect(() => {
-    // // eslint-disable-next-line import/no-webpack-loader-syntax
-    // 1 scroll down | 2 theplatform | 3 plans | 4
     const handleScroll = (event) => {
       handleTimeUpdate();
       let sY = window.scrollY;
@@ -129,9 +143,10 @@ function App() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   useEffect(() => {
-    // Add event listener to disable right-click context menu
-    // document.addEventListener("contextmenu", (event) => event.preventDefault());
+    //Add event listener to disable right-click context menu
+    document.addEventListener("contextmenu", (event) => event.preventDefault());
   }, []);
 
   useWindowResize(videoEl);
@@ -589,12 +604,6 @@ function App() {
                         </a>
                       </p>
                     </li>
-                    {/* <li>
-                      <h3>RESOURCES</h3>
-                      <p>
-                        <a href="#blog">Blog</a>
-                      </p>
-                    </li> */}
                   </ul>
                 </div>
               </footer>

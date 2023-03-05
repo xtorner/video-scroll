@@ -1,23 +1,20 @@
 import React, { useState, useEffect, useRef } from "react";
-
 const Constrain = 500;
 
 const PerspectiveBox = ({ children, initialPosition, data, ...props }) => {
   const [isMouseOver, setIsMouseOver] = useState(false);
   const [xy, setXY] = useState(initialPosition);
   const ex1LayerRef = useRef(null);
-
   const transforms = (x, y, el) => {
     let box = el.getBoundingClientRect();
     let calcX = -(y - box.y - box.height / 2) / Constrain;
     let calcY = (x - box.x - box.width / 2) / Constrain;
-    //console.log(calcX, calcY);
     return `perspective(100px) rotateX(${calcX}deg) rotateY(${calcY}deg)`;
   };
 
   useEffect(() => {
     ex1LayerRef.current.style.transform = `perspective(100px) rotateX(${initialPosition[0]}deg) rotateY(${initialPosition[1]}deg)`;
-  }, []);
+  }, [initialPosition]);
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -25,7 +22,6 @@ const PerspectiveBox = ({ children, initialPosition, data, ...props }) => {
         setXY([e.clientX, e.clientY]);
       }
     };
-
     window.addEventListener("mousemove", handleMouseMove);
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
