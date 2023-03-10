@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, useLayoutEffect } from "react";
-import video from "./assets/vid.mp4";
+import video from "./assets/vid2.mp4";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 import { NavLink } from "react-bootstrap";
@@ -25,19 +25,22 @@ import CarrouselData from "./components/utils/CarrouselData";
 
 /** COMPONENTS */
 const Anchor = React.forwardRef((props, ref) => <div ref={ref} {...props} />);
-const VideoComponent = React.forwardRef((props, ref) => (
-  <video
-    playsInline
-    muted
-    preload="auto"
-    ref={ref}
-    src={props.video}
-    width="100%"
-    height="100%"
-    onLoadedData={props.handleLoadedData}
-    onTimeUpdate={props.handleTimeUpdate}
-  />
-));
+
+const VideoComponent = React.forwardRef(
+  ({ video, handleLoadedData, handleTimeUpdate }, ref) => (
+    <video
+      playsInline
+      muted
+      preload="auto"
+      ref={ref}
+      src={video}
+      width="100%"
+      height="100%"
+      onLoadedData={handleLoadedData}
+      onTimeUpdate={handleTimeUpdate}
+    />
+  )
+);
 
 function App() {
   const isEdge = /Edge/.test(navigator.userAgent);
@@ -75,6 +78,10 @@ function App() {
     ["anchor5", anchor5Ref],
   ]);
 
+  const [showModal, setShowModal] = useState(false);
+
+  const toggleModal = () => setShowModal(!showModal);
+
   // This function handles clicking on the subscribe button to subscribe user to the newsletter
   const handleClickSubscribeNewsletter = (event) => {
     handleAnchor("anchor5");
@@ -110,14 +117,19 @@ function App() {
     handleLoadedData();
   };
 
+  // Run the handleScroll function when the component loads
   useEffect(() => {
+    // Define a callback function for the window scroll event
     const handleScroll = (event) => {
+      // Call the handleTimeUpdate function
       handleTimeUpdate();
+      // Store the current Y scrolling position in 'sY'
       let sY = window.scrollY;
+      // Update elements object by changing the value of its properties based on the current scrolling position
       setElements({
         ...elements,
         element1: sY < 115 ? elements.element1 : !elements.element1,
-        element2: sY > 150 && sY < 580 ? !elements.element2 : elements.element2,
+        element2: sY > 140 && sY < 580 ? !elements.element2 : elements.element2,
         element3: sY > 660 && sY < 860 ? !elements.element3 : elements.element3,
         element4:
           sY > 860 && sY < 1130 ? !elements.element4 : elements.element4,
@@ -125,10 +137,12 @@ function App() {
           sY > 1150 && sY < 1400 ? !elements.element5 : elements.element5,
         element6: sY > 1410 ? !elements.element6 : elements.element6,
       });
-      if (window.scrollY > 10) {
+      // If the user scrolls more than 2 pixels (this is just a tr¡ck)
+      if (window.scrollY > 2) {
+        // Calculate the current scroll position relative to the video duration and update the video's current time
         const scrollPos = window.scrollY / 10.5;
-        // console.log(window.scrollY, videoEl.current.duration);
         videoEl.current.currentTime = scrollPos / 10;
+        // Determine the end of the section that differs on Edge Browser and update the classFooter state based on whether the section is fully scrolled
         const endScroll = isEdge ? 1780 : 1600;
         setClassFooter(
           window.scrollY > endScroll
@@ -137,8 +151,10 @@ function App() {
         );
       }
     };
+    // Add the event listener to the window to trigger the handleScroll function when the user scrolls
     window.addEventListener("scroll", handleScroll);
 
+    // Remove the event listener when the component unloads
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -162,12 +178,17 @@ function App() {
     }, 1500);
   }, []);
 
+  // Excecutes the following function after every completed render cycle
   useLayoutEffect(() => {
+    // Get ref to HTML element associated with plansHtmlRef
     const currentHTML = plansHtmlRef.current;
-    console.log(currentHTML);
+
+    // Conditional statement to check if ref is valid
     if (!!currentHTML) {
+      // Attach a click event listener on the extracted HTML element (to handle clicks on subscribe)
       currentHTML.addEventListener("click", handleClickSubscribeNewsletter);
 
+      // Return function to remove event listener when unmounting the component or updating props
       return () => {
         currentHTML.removeEventListener(
           "click",
@@ -175,11 +196,9 @@ function App() {
         );
       };
     }
+    // Specifying plansHtmlRef.current as a useEffect dependency will cause this block of code to execute where the
+    // references to the callback and plansHtml elements are set up by causing a new effect to hook up after the reference update.
   }, [plansHtmlRef.current]);
-
-  const [showModal, setShowModal] = useState(false);
-
-  const toggleModal = () => setShowModal(!showModal);
 
   const handleSubmitContact = (e) => {
     e.preventDefault();
@@ -191,6 +210,7 @@ function App() {
       browser: navigator.userAgent,
     };
   };
+
   const handleSubmitSubscribe = (e) => {
     e.preventDefault();
     const { emailsubscribe } = e.target;

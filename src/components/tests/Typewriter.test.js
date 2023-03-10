@@ -16,8 +16,8 @@ describe("Typewriter", () => {
   });
 
   it("displays text one character at a time", async () => {
-    const text = "Hello, World!";
-    const { getByText } = render(<Typewriter text={text} />, container);
+    const text = "Empower your child";
+    const { getByText } = render(<Typewriter text={{ text }} />, container);
 
     let displayedText = "";
     for (let i = 0; i <= text.length; i++) {
