@@ -529,7 +529,7 @@ body::-webkit-scrollbar-thumb {
   background-color: #f6e2a675;
 }
 .section-theteam-color {
-  background-color: #f2bfbe50;
+  background-color: #f2bfbe99;
 }
 .section-contact-color {
   background-color: #f0a5be85;
@@ -808,7 +808,7 @@ section ul {
     position: fixed;
     text-transform: uppercase;
     z-index: 2;
-    top: 20vh;
+    top: 18vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -1025,7 +1025,7 @@ section ul {
 } */
 @media (min-width: 769px) and (min-width: 1024px) {
   .static-info-1 {
-    top: 20rem;
+    top: 18rem;
     font-size: 2vw;
   }
   .section-platform {

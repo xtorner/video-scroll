@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect, useLayoutEffect } from "react";
 import video from "./assets/vid2.mp4";
+//import video1 from "./assets/vid.mp4";
+
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 import { NavLink } from "react-bootstrap";
@@ -22,8 +24,10 @@ import PlansHTML from "./components/html/PlansHTML";
 import LoaderBlock from "./components/utils/loader-block/LoaderBlock";
 import ImageCarousel from "./components/utils/ImageCarousel";
 import CarrouselData from "./components/utils/CarrouselData";
+import MenuDropdown from "./components/utils/MenuDropdown";
 
 /** COMPONENTS */
+
 const Anchor = React.forwardRef((props, ref) => <div ref={ref} {...props} />);
 
 const VideoComponent = React.forwardRef(
@@ -31,7 +35,7 @@ const VideoComponent = React.forwardRef(
     <video
       playsInline
       muted
-      preload="auto"
+      preload="metadata"
       ref={ref}
       src={video}
       width="100%"
@@ -58,6 +62,33 @@ function App() {
     element5: false,
     element6: false,
   });
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [activeOption, setActiveOption] = useState(null);
+
+  const menuOptions = [
+    {
+      name: "The Platform",
+      subOptions: [
+        { name: "Option 1", path: "/option1" },
+        { name: "Option 2", path: "/option2" },
+      ],
+    },
+    {
+      name: "Plans",
+      subOptions: [{ name: "Option 3", path: "/option3" }],
+    },
+    {
+      name: "Company",
+      subOptions: [{ name: "Option 4", path: "/option4" }],
+    },
+  ];
+
+  const toggleMenu = (optionName) => {
+    setActiveOption((prevOption) =>
+      prevOption === optionName ? null : optionName
+    );
+    toggleMenu(optionName);
+  };
 
   /** DIFERED REFERENCES */
   const videoEl = useRef(null);
@@ -138,7 +169,7 @@ function App() {
         element6: sY > 1410 ? !elements.element6 : elements.element6,
       });
       // If the user scrolls more than 2 pixels (this is just a tr¡ck)
-      if (window.scrollY > 2) {
+      if (window.scrollY > 0) {
         // Calculate the current scroll position relative to the video duration and update the video's current time
         const scrollPos = window.scrollY / 10.5;
         videoEl.current.currentTime = scrollPos / 10;
@@ -260,7 +291,16 @@ function App() {
                 <span className="navbar-toggler-icon"></span>
               </button>
               <div className="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul className="navbar-nav">
+                <MenuDropdown
+                  menuOptions={menuOptions}
+                  toggleMenu={toggleMenu}
+                  menuOpen={menuOpen}
+                  NavLink={NavLink}
+                  activeOption={activeOption}
+                  setActiveOption={setActiveOption}
+                />
+
+                {/* <ul className="navbar-nav">
                   <li className="nav-item active">
                     <NavLink
                       className="nav-link"
@@ -288,7 +328,7 @@ function App() {
                       <TextHoverEffect text="Company" />
                     </NavLink>
                   </li>
-                </ul>
+                </ul> */}
               </div>
             </nav>
           </div>
