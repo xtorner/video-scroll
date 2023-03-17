@@ -69,8 +69,8 @@ function App() {
     {
       name: "The Platform",
       subOptions: [
-        { name: "Option 1", path: "/option1" },
-        { name: "Option 2", path: "/option2" },
+        { name: "What we do", path: "/option1" },
+        { name: "What we offer", path: "/option2" },
       ],
     },
     {
