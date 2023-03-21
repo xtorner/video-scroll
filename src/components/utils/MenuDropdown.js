@@ -5,6 +5,7 @@ const MenuDropdown = ({
   activeOption,
   NavLink,
   setActiveOption,
+  handleAnchor,
 }) => {
   const hideMenu = () => {
     setActiveOption(null);
@@ -13,7 +14,7 @@ const MenuDropdown = ({
   return (
     <ul className="navbar-nav mr-auto">
       {menuOptions.map((option) => (
-        <li className="nav-item dropdown" key={option.name}>
+        <li className="nav-item dropdown border" key={option.name}>
           <NavLink
             className={`nav-link dropdown-toggle ${
               option.name === activeOption ? "active" : ""
@@ -32,15 +33,17 @@ const MenuDropdown = ({
             }`}
             aria-labelledby={`dropdown-${option.name}`}
           >
-            {option.subOptions.map((subOption) => (
-              <NavLink
-                className="dropdown-item"
-                to={subOption.path}
-                key={subOption.name}
-              >
-                {subOption.name}
-              </NavLink>
-            ))}
+            {option.subOptions &&
+              option.subOptions.map((subOption) => (
+                <NavLink
+                  className="dropdown-item"
+                  to={subOption.path}
+                  key={subOption.name}
+                  onClick={() => handleAnchor(subOption.anchor)}
+                >
+                  {subOption.name}
+                </NavLink>
+              ))}
           </div>
         </li>
       ))}

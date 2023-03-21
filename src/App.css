@@ -11,7 +11,7 @@
 }
 
 .fade {
-  transition: all 0.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
   opacity: 0;
 }
 
@@ -84,7 +84,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 5rem;
+  margin-top: -5rem;
   margin-left: 5rem;
   width: 50%;
   height: auto;
@@ -438,39 +438,51 @@ body::-webkit-scrollbar-thumb {
   border-radius: 1.8rem;
   align-items: flex-start;
   justify-content: flex-start;
+
   /* overflow: hidden;  border-radius: 1.8rem;*/
 }
-/* SECTION PLATFORM */
 .section.section-platform {
-  position: absolute;
+  /* position: relative;
   z-index: 10;
-  /* visibility: hidden; */
+  
   top: 30rem;
-
-  left: 10rem;
-  /* display: flex;
-  flex-direction: column; */
-  width: 60%;
-  height: 20rem;
+  right: 0;
+  left: 50%;
+  
+  width: 40%;
+  height: 30rem;
   align-items: flex-start;
   justify-content: flex-start;
-  font-size: 1.2vw;
+  font-size: 1.2vw; */
+
+  display: flex;
+
+  width: 42%;
+  height: 30rem;
+  margin-right: 2rem;
+  left: 55%;
+  flex-direction: column;
+  top: 25rem;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1vw !important;
 }
 .platform-wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 30rem;
+  height: 100%;
 }
-.section-platform {
+/* .section-platform {
   position: absolute;
   z-index: 10;
   top: 30rem;
-  left: 10rem;
+  left: 50%;
   width: 60%;
   align-items: flex-start;
   justify-content: flex-start;
   font-size: 1vw;
-}
+} */
 .section-legal {
   position: relative;
 }
@@ -520,37 +532,44 @@ body::-webkit-scrollbar-thumb {
   }
 } */
 .section-platform-color {
-  background-color: #85d4ac95;
+  background-color: #85d4ac80;
+  backdrop-filter: blur(0.5rem);
 }
 .section-plans-color {
-  background-color: #f2c67f95;
+  background-color: #f2c67f80;
+  backdrop-filter: blur(0.5rem);
 }
 .section-about-color {
-  background-color: #f6e2a675;
+  background-color: #f6e2a680;
+  backdrop-filter: blur(0.5rem);
 }
 .section-theteam-color {
-  background-color: #f2bfbe99;
+  background-color: #f2bfbe80;
+  backdrop-filter: blur(0.5rem);
 }
 .section-contact-color {
   background-color: #f0a5be85;
+  backdrop-filter: blur(0.5rem);
 }
 .section-subscribe-color {
   background-color: #cea5f090;
+  backdrop-filter: blur(0.5rem);
 }
 .section-legal-color {
   background-color: #cddedf;
+  backdrop-filter: blur(0.5rem);
 }
 /* ENS SECTION PLATFORM */
 
 /* SECTION PLANS */
 .section.section-plans {
   display: flex;
-  width: 49%;
+  width: 42%;
   height: 23rem;
   margin-right: 2rem;
-  left: 45%;
+  left: 2rem;
   flex-direction: column;
-  top: 55rem;
+  top: 23rem;
   align-items: center;
   justify-content: flex-start;
   font-size: 1vw;
@@ -648,7 +667,7 @@ section ul {
   height: 27rem;
   justify-content: flex-start;
 
-  top: 95rem;
+  top: 85rem;
   z-index: 9;
   font-size: 1vw;
 }
@@ -1029,9 +1048,8 @@ section ul {
     font-size: 2vw;
   }
   .section-platform {
-    min-height: 49%;
-    width: 54% !important;
-    left: 10rem !important;
+    width: 44% !important;
+    left: 5rem !important;
     font-size: 1.1vw !important;
   }
   .section-theteam {
@@ -1069,7 +1087,6 @@ form {
 }
 
 .form-group .input,
-.form-group .checkbox,
 .form-group,
 .textarea {
   width: 100%;
@@ -1077,6 +1094,11 @@ form {
   border-radius: 5px;
   margin-left: 0px;
   display: flex;
+}
+.form-group .checkbox {
+  width: auto;
+  display: flex;
+  margin-left: 0;
 }
 
 label {
@@ -1154,4 +1176,8 @@ label {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+/** DROPODOWN-MENU */
+.dropdown-menu {
 }

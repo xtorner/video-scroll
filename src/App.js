@@ -62,24 +62,23 @@ function App() {
     element5: false,
     element6: false,
   });
-  const [menuOpen, setMenuOpen] = useState(false);
+
   const [activeOption, setActiveOption] = useState(null);
 
   const menuOptions = [
     {
       name: "The Platform",
       subOptions: [
-        { name: "What we do", path: "/option1" },
-        { name: "What we offer", path: "/option2" },
+        { name: "What we do", anchor: "anchor1" },
+        { name: "What we offer", anchor: "anchor1" },
       ],
     },
     {
       name: "Plans",
-      subOptions: [{ name: "Option 3", path: "/option3" }],
     },
     {
       name: "Company",
-      subOptions: [{ name: "Option 4", path: "/option4" }],
+      subOptions: [{ name: "Option 4", anchor: "anchor4" }],
     },
   ];
 
@@ -160,10 +159,10 @@ function App() {
       setElements({
         ...elements,
         element1: sY < 115 ? elements.element1 : !elements.element1,
-        element2: sY > 140 && sY < 580 ? !elements.element2 : elements.element2,
-        element3: sY > 660 && sY < 860 ? !elements.element3 : elements.element3,
+        element2: sY > 176 && sY < 380 ? !elements.element2 : elements.element2,
+        element3: sY > 500 && sY < 760 ? !elements.element3 : elements.element3,
         element4:
-          sY > 860 && sY < 1130 ? !elements.element4 : elements.element4,
+          sY > 760 && sY < 1130 ? !elements.element4 : elements.element4,
         element5:
           sY > 1150 && sY < 1400 ? !elements.element5 : elements.element5,
         element6: sY > 1410 ? !elements.element6 : elements.element6,
@@ -193,7 +192,7 @@ function App() {
 
   useEffect(() => {
     //Add event listener to disable right-click context menu
-    document.addEventListener("contextmenu", (event) => event.preventDefault());
+    //document.addEventListener("contextmenu", (event) => event.preventDefault());
   }, []);
 
   useWindowResize(videoEl);
@@ -291,16 +290,16 @@ function App() {
                 <span className="navbar-toggler-icon"></span>
               </button>
               <div className="collapse navbar-collapse" id="navbarNavDropdown">
-                <MenuDropdown
+                {/* <MenuDropdown
                   menuOptions={menuOptions}
                   toggleMenu={toggleMenu}
-                  menuOpen={menuOpen}
                   NavLink={NavLink}
                   activeOption={activeOption}
                   setActiveOption={setActiveOption}
-                />
+                  handleAnchor={handleAnchor}
+                /> */}
 
-                {/* <ul className="navbar-nav">
+                <ul className="navbar-nav">
                   <li className="nav-item active">
                     <NavLink
                       className="nav-link"
@@ -328,20 +327,17 @@ function App() {
                       <TextHoverEffect text="Company" />
                     </NavLink>
                   </li>
-                </ul> */}
+                </ul>
               </div>
             </nav>
           </div>
 
           <section
-            className={`static-info-1 section fade ${
+            className={`static-info-1 sectionx fade ${
               elements.element1 ? "visible" : "hidden"
             }`}
           >
-            <PerspectiveBox
-              initialPosition={[-0.5, 2.4]}
-              data="typewriter sectonx"
-            >
+            <PerspectiveBox initialPosition={[-0.5, 2.4]} data="typewriter">
               <Typewriter
                 text="Empower your child
               with a 21st-century education
@@ -507,10 +503,11 @@ function App() {
                           <input
                             type="checkbox"
                             id="contactcheck"
+                            name="contactcheck"
                             required
                             className="checkbox"
                           />
-                          <label htmlFor="legalcheck">
+                          <label htmlFor="contactcheck">
                             I have read and accept the Privacy Policy.
                           </label>
                         </div>
@@ -550,17 +547,19 @@ function App() {
                           <input
                             type="email"
                             id="emailsubscribe"
+                            name="emailsubscribe"
                             className="input"
                             required
                           />
-                          <label htmlFor="input">Your Email</label>
+                          <label htmlFor="emailsubscribe">Your Email</label>
                         </div>
                       </div>
                       <div className="col-md-12">
                         <div className="form-group">
                           <input
                             type="checkbox"
-                            id="subscribecheck"
+                            id="legalcheck"
+                            name="legalcheck"
                             required
                             className="checkbox"
                           />
@@ -607,10 +606,20 @@ function App() {
                     <li>
                       <h3>THE PLATFORM</h3>
                       <p>
-                        <a href="#whatweoffer">What we offer</a>
+                        <a
+                          href="#whatweoffer"
+                          onClick={() => handleAnchor("anchor1")}
+                        >
+                          What we offer
+                        </a>
                       </p>
                       <p>
-                        <a href="#whatwedo">What we do</a>
+                        <a
+                          href="#whatwedo"
+                          onClick={() => handleAnchor("anchor1")}
+                        >
+                          What we do
+                        </a>
                       </p>
                     </li>
                     <li>
