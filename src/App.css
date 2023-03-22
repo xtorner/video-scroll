@@ -567,7 +567,7 @@ body::-webkit-scrollbar-thumb {
   width: 42%;
   height: 23rem;
   margin-right: 2rem;
-  left: 2rem;
+  left: 50%;
   flex-direction: column;
   top: 23rem;
   align-items: center;
@@ -980,7 +980,7 @@ section ul {
   .section-plans {
     min-height: 50%;
     width: 80% !important;
-    left: 5.5rem !important;
+    left: 32.5rem !important;
     font-size: 2vw !important;
   }
   .section-theteam {
