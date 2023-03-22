@@ -968,8 +968,8 @@ section ul {
 
 @media (min-width: 320px) and (max-width: 767px) {
   .section-platform {
-    min-height: 40%;
-    width: 75% !important;
+    height: 25rem !important;
+    width: 90% !important;
     left: 3.5rem !important;
   }
   .section-plans {
@@ -1003,14 +1003,16 @@ section ul {
   .section-about-us {
     position: absolute;
     display: flex;
-    width: 65%;
-    height: 22rem;
+    width: 90% !important;
+    height: 43rem !important;
     justify-content: center;
-    left: 100px;
+    left: 20px;
 
     justify-content: flex-start;
     top: 70rem;
-    font-size: 1.5vw;
+  }
+  .section-about-us p {
+    font-size: 2vh !important;
   }
   .section-contact {
     height: 31rem;
