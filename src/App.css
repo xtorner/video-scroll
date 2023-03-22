@@ -966,7 +966,25 @@ section ul {
   margin-top: 1.5rem;
 }
 
+/** MEDIA MOBILE PHONE */
 @media (min-width: 320px) and (max-width: 767px) {
+  .static-info-1 {
+    top: 12rem !important;
+    position: fixed;
+    text-transform: uppercase;
+    z-index: 2;
+    left: 1rem !important;
+    right: 1rem !important;
+    margin: auto;
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 85%;
+    height: auto;
+    background-color: #f1f2f125;
+  }
   .section-platform {
     height: 25rem !important;
     width: 90% !important;
