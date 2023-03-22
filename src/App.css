@@ -968,16 +968,14 @@ section ul {
 
 @media (min-width: 320px) and (max-width: 767px) {
   .section-platform {
-    min-height: 50%;
-    width: 80% !important;
+    min-height: 40%;
+    width: 75% !important;
     left: 3.5rem !important;
-    font-size: 2vw !important;
   }
   .section-plans {
-    min-height: 50%;
-    width: 80% !important;
-    left: 32.5rem !important;
-    font-size: 2vw !important;
+    height: 28rem !important;
+    width: 90% !important;
+    left: 2.5rem !important;
   }
   .section-theteam {
     display: flex;
@@ -1027,6 +1025,26 @@ section ul {
     width: 80% !important;
     left: 3.5rem !important;
     font-size: 2vw !important;
+  }
+  section ul {
+    padding-top: 0;
+    padding-left: 2%;
+    padding-right: 5%;
+    list-style-position: inside;
+    font-size: 3vw;
+  }
+
+  section h4 {
+    font-size: 4vw;
+  }
+
+  section h3 {
+    font-size: 3.5vw;
+  }
+  section p,
+  section h2 {
+    font-size: 4vw !important;
+    padding-left: 1rem;
   }
 }
 

@@ -13,8 +13,8 @@ const BackgroundWithText = ({ children }) => {
     const n = new noise.Noise(Math.random());
     let points = "";
     for (let a = 0; a < 8 * Math.PI; a += 0.005) {
-      const x = 300 / 5 + 180 * n.perlin2(a, a) * Math.cos(a * a);
-      const y = 60 / 0.98 + 130 * n.perlin2(a, a) * Math.sin(a * Math.sin(a));
+      const x = 300 / 5 + 140 * n.perlin2(a, a) * Math.cos(a * a);
+      const y = 60 / 0.98 + 80 * n.perlin2(a, a) * Math.sin(a * Math.sin(a));
       points += `${x.toFixed(2)},${y.toFixed(2)} `;
     }
     // console.log(points);
