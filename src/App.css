@@ -1011,6 +1011,10 @@ section ul {
   .section-theteam .controls {
     width: 9rem !important;
   }
+  .section-theteam .slide-container .text {
+    margin: 0;
+    font-size: 0.6rem;
+  }
   .section-theteam .text-slide-container p {
     width: 80%;
     overflow-y: scroll !important;
