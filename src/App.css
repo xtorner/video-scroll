@@ -806,20 +806,27 @@ section ul {
   right: 0;
 }
 .controls {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+  /* position: absolute;
+  top: 10px; 
+  right: 10px;*/
+  display: flex;
+  margin-bottom: 1rem;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
   z-index: 2000;
 }
 
 .controls button {
-  padding: 0.5rem;
-  margin-right: 0.5rem;
-  background: none;
+  padding: 0.2rem;
+  width: 95%;
+
+  background-color: #a09b9b72;
   border: none;
   color: white;
   font-size: 1.5rem;
-  filter: drop-shadow(0 0 0.1rem rgba(19, 19, 19, 75));
+
+  /* filter: drop-shadow(0 0 0.1rem rgba(19, 19, 19, 25)); */
 }
 
 @media only screen and (min-width: 600px) {

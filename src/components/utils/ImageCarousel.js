@@ -19,22 +19,23 @@ function ImageCarousel({ images }) {
 
   return (
     <div className="image-carousel">
-      <div className="controls">
-        <button onClick={handlePrevClick}>&lt;</button>
-        <button onClick={handleNextClick}>&gt;</button>
-      </div>
       <div className="slide-container">
         {images.map((image, index) => (
           <div
             key={image.src}
             className={`slide ${activeIndex === index ? "active" : ""}`}
           >
-            <img src={image.src} alt="" />
             <div className="text">{image.text}</div>
+            <img src={image.src} alt="" />
           </div>
         ))}
       </div>
+
       <div className="text-slide-container">
+        <div className="controls">
+          <button onClick={handlePrevClick}>&lt;</button>
+          <button onClick={handleNextClick}>&gt;</button>
+        </div>
         <p dangerouslySetInnerHTML={{ __html: description }}></p>
       </div>
     </div>
