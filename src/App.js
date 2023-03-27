@@ -25,6 +25,7 @@ import LoaderBlock from "./components/utils/loader-block/LoaderBlock";
 import ImageCarousel from "./components/utils/ImageCarousel";
 import CarrouselData from "./components/utils/CarrouselData";
 import MenuDropdown from "./components/utils/MenuDropdown";
+import Chatbot from "./components/utils/Chatbot";
 
 /** COMPONENTS */
 
@@ -454,76 +455,84 @@ function App() {
             }`}
           >
             <PerspectiveBox
-              initialPosition={[-0.36, 0.58]}
+              initialPosition={[0, 0]}
               data="section-contact-color sectionx"
             >
               <BackgroundWithText>
-                <h2>Contact Us</h2>
+                <>
+                  <h2>Contact Us</h2>
 
-                <div className="form-wrapper">
-                  <form onSubmit={handleSubmitContact}>
-                    <div className="row">
-                      <div className="col-md-6">
-                        <div className="form-group">
-                          <input
-                            type="text"
-                            id="namecontact"
-                            className="name-contact input"
-                            required
-                          />
-                          <label htmlFor="name-contact">Your Name:</label>
+                  <div className="form-wrapper">
+                    <form onSubmit={handleSubmitContact}>
+                      <div className="row">
+                        <div className="col-md-6">
+                          <div className="form-group">
+                            <input
+                              type="text"
+                              id="namecontact"
+                              className="name-contact input"
+                              required
+                            />
+                            <label htmlFor="name-contact">Your Name:</label>
+                          </div>
                         </div>
-                      </div>
 
-                      <div className="col-md-6">
-                        <div className="form-group">
-                          <input
-                            type="email"
-                            id="emailcontact"
-                            className="email-contact input"
-                            required
-                          />
-                          <label htmlFor="email-contact">Your Email</label>
+                        <div className="col-md-6">
+                          <div className="form-group">
+                            <input
+                              type="email"
+                              id="emailcontact"
+                              className="email-contact input"
+                              required
+                            />
+                            <label htmlFor="email-contact">Your Email</label>
+                          </div>
                         </div>
-                      </div>
 
-                      <div className="col-md-12">
-                        <div className="form-group">
-                          <textarea
-                            type="textarea"
-                            id="messagecontact"
-                            className="message-contact textarea"
-                            required
-                          />
-                          <label htmlFor="message-contact">Your Message:</label>
+                        <div className="col-md-12">
+                          <div className="form-group">
+                            <textarea
+                              type="textarea"
+                              id="messagecontact"
+                              className="message-contact textarea"
+                              required
+                            />
+                            <label htmlFor="message-contact">
+                              Your Message:
+                            </label>
+                          </div>
+                        </div>
+                        <div className="col-md-12">
+                          <div className="form-group">
+                            <input
+                              type="checkbox"
+                              id="contactcheck"
+                              name="contactcheck"
+                              required
+                              className="checkbox"
+                            />
+                            <label htmlFor="contactcheck">
+                              I have read and accept the Privacy Policy.
+                            </label>
+                          </div>
+                        </div>
+                        <div className="col-md-12 button-contact">
+                          <button type="submit" className="button">
+                            SEND
+                          </button>
                         </div>
                       </div>
-                      <div className="col-md-12">
-                        <div className="form-group">
-                          <input
-                            type="checkbox"
-                            id="contactcheck"
-                            name="contactcheck"
-                            required
-                            className="checkbox"
-                          />
-                          <label htmlFor="contactcheck">
-                            I have read and accept the Privacy Policy.
-                          </label>
-                        </div>
-                      </div>
-                      <div className="col-md-12 button-contact">
-                        <button type="submit" className="button">
-                          SEND
-                        </button>
-                      </div>
-                    </div>
-                    {/* <div className='row  button-flip-wrapper'>
+                      {/* <div className='row  button-flip-wrapper'>
                                   <input className="checkbox1" type="checkbox" id="reg-log1" name="reg-log1" />
                                   <label htmlFor="reg-log1" onClick={ switchModeHandler } />
                                 </div> */}
-                  </form>
-                </div>
+                    </form>
+                  </div>
+                  <div className="form-wrapper-chatbot">
+                    <h4>Ask me your doubts!</h4>
+                    <Chatbot />
+                  </div>
+                </>
               </BackgroundWithText>
             </PerspectiveBox>
           </section>
